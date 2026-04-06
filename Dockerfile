@@ -6,10 +6,7 @@ RUN comfy node install --exit-on-fail rgthree-comfy@1.0.2512112053 --mode remote
 
 # download models into comfyui
 RUN comfy model download --url https://huggingface.co/nnnn1111/models-moved/resolve/main/waiNSFWIllustrious_v150.safetensors --relative-path models/checkpoints --filename waiNSFWIllustrious_v150.safetensors
-ARG CIVITAI_TOKEN
-ENV CIVITAI_TOKEN=$CIVITAI_TOKEN
 
-RUN curl -L "https://civitai.com/api/download/models/2787552?token=${CIVITAI_TOKEN}" \
-    -o /comfyui/models/loras/KimPossible-ArtStyle.safetensors
+RUN comfy model download --url "https://www.dropbox.com/scl/fi/kosfszac2jmlq1sa25pgv/KimPossibleIllustrious2.0JLFO.safetensors?rlkey=h7s3ndipjhm9eu78fyxprtzqr&st=1uvfu8jv&dl=1" --relative-path models/loras --filename KimPossible-ArtStyle.safetensors
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
