@@ -40,6 +40,19 @@ class Opener:
         return response
 
 
+class FakeClock:
+    def __init__(self):
+        self.current = 0
+        self.sleeps = []
+
+    def now(self):
+        return self.current
+
+    def sleep(self, seconds):
+        self.sleeps.append(seconds)
+        self.current += seconds
+
+
 class DownloaderTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -53,10 +66,13 @@ class DownloaderTests(unittest.TestCase):
         }
         self.destination = self.directory / self.model["filename"]
         self.partial = self.directory / f"{self.model['filename']}.{self.model['sha256'][:12]}.part"
+        self.clock = FakeClock()
+        self.limiter = downloader.RequestStartLimiter(0, 1200, self.clock.now, self.clock.sleep)
 
     def download(self, opener, retries=2):
         with contextlib.redirect_stdout(io.StringIO()):
-            return downloader.download_one(self.model, self.directory, retries=retries, retry_delay=0, opener=opener)
+            return downloader.download_one(self.model, self.directory, retries=retries, retry_delay=0,
+                                           opener=opener, limiter=self.limiter)
 
     def manifest(self, models=None):
         path = self.directory / "manifest.json"
@@ -170,11 +186,73 @@ class DownloaderTests(unittest.TestCase):
                 with self.assertRaisesRegex(downloader.DownloadError, "refusing an incomplete image"):
                     downloader.install([self.model], self.directory)
 
-    def test_retry_after_is_respected_and_capped(self):
+    def test_retry_after_is_fully_respected_without_60_second_cap(self):
         limited = urllib.error.HTTPError(self.model["downloadUrl"], 429, "rate limited", {"Retry-After": "120"}, None)
-        with patch.object(downloader.time, "sleep") as sleep:
-            self.download(Opener(limited, Response(self.payload)))
-        sleep.assert_called_once_with(60)
+        self.download(Opener(limited, Response(self.payload)))
+        self.assertEqual(self.clock.current, 120)
+
+    def test_oversized_retry_after_stops_without_early_retry(self):
+        self.limiter = downloader.RequestStartLimiter(0, 120, self.clock.now, self.clock.sleep)
+        limited = urllib.error.HTTPError(self.model["downloadUrl"], 429, "rate limited", {"Retry-After": "300"}, None)
+        opener = Opener(limited)
+        with self.assertRaisesRegex(downloader.RateLimitError, "no early retry"):
+            self.download(opener)
+        self.assertEqual(len(opener.requests), 1)
+        self.assertEqual(self.clock.current, 0)
+        with self.assertRaises(downloader.InstallationStopped):
+            self.limiter.wait_turn()
+
+    def test_missing_retry_after_uses_30_60_second_shared_backoff(self):
+        errors = [urllib.error.HTTPError(self.model["downloadUrl"], 429, "rate limited", {}, None) for _ in range(2)]
+        opener = Opener(*errors, Response(self.payload))
+        self.download(opener, retries=3)
+        self.assertEqual(self.clock.current, 90)
+        self.assertEqual(len(opener.requests), 3)
+
+    def test_shared_limiter_spaces_different_downloads(self):
+        limiter = downloader.RequestStartLimiter(5, 120, self.clock.now, self.clock.sleep)
+        limiter.wait_turn()
+        self.assertEqual(self.clock.current, 0)
+        limiter.wait_turn()
+        self.assertEqual(self.clock.current, 5)
+        limiter.defer_all(120 - 6)
+        limiter.wait_turn()
+        self.assertEqual(self.clock.current, 119)
+
+    def test_shared_cooldown_delays_other_workers(self):
+        limiter = downloader.RequestStartLimiter(5, 300, self.clock.now, self.clock.sleep)
+        limiter.wait_turn()
+        limiter.defer_all(90)
+        limiter.wait_turn()
+        self.assertEqual(self.clock.current, 90)
+        limiter.wait_turn()
+        self.assertEqual(self.clock.current, 95)
+
+    def test_exhausted_429_stops_all_queued_requests(self):
+        limited = urllib.error.HTTPError(self.model["downloadUrl"], 429, "rate limited", {}, None)
+        first = Opener(limited)
+        with self.assertRaises(downloader.RateLimitError):
+            self.download(first, retries=1)
+        second = Opener(Response(self.payload))
+        with self.assertRaises(downloader.InstallationStopped):
+            self.download(second)
+        self.assertEqual(self.limiter.cooldown_until, 30)
+        self.assertEqual(len(second.requests), 0)
+
+    def test_known_civitai_daily_quota_stops_immediately(self):
+        body = b'{"error":"We\'ve noticed an unusual amount of downloading from your account. Contact support@civitai.com or come back later."}'
+        limited = urllib.error.HTTPError(self.model["downloadUrl"], 429, "rate limited", {}, io.BytesIO(body))
+        opener = Opener(limited)
+        with self.assertRaisesRegex(downloader.RateLimitError, "quota reached"):
+            self.download(opener)
+        self.assertEqual(len(opener.requests), 1)
+        self.assertEqual(self.clock.current, 0)
+
+    def test_overall_budget_prevents_next_request(self):
+        limiter = downloader.RequestStartLimiter(5, 3, self.clock.now, self.clock.sleep)
+        limiter.wait_turn()
+        with self.assertRaisesRegex(downloader.InstallationStopped, "remaining installation time budget"):
+            limiter.wait_turn()
 
     def test_character_catalog_meets_minimum_and_retains_kim(self):
         path = Path(__file__).resolve().parents[1] / "catalog" / "character-loras.json"

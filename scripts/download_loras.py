@@ -10,11 +10,13 @@ from email.utils import parsedate_to_datetime
 import hashlib
 import http.client
 import json
+import math
 import os
 from pathlib import Path
 import re
 import struct
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -33,6 +35,87 @@ class DownloadError(RuntimeError):
 
 class IntegrityError(DownloadError):
     pass
+
+
+class RateLimitError(DownloadError):
+    pass
+
+
+class InstallationStopped(DownloadError):
+    pass
+
+
+class RequestStartLimiter:
+    """One request schedule, cooldown and wall-clock budget shared by every worker."""
+
+    def __init__(self, min_interval=5, max_elapsed=1200, clock=None, sleep=None):
+        self.clock = clock or time.monotonic
+        self.sleep = sleep or time.sleep
+        self.min_interval = min_interval
+        self.deadline = self.clock() + max_elapsed
+        self.next_start = self.clock()
+        self.cooldown_until = self.clock()
+        self.failure = None
+        self.lock = threading.Lock()
+
+    def stop(self, reason):
+        with self.lock:
+            if self.failure is None:
+                self.failure = str(reason)
+
+    def remaining(self):
+        with self.lock:
+            if self.failure:
+                raise InstallationStopped(self.failure)
+            remaining = self.deadline - self.clock()
+            if remaining <= 0:
+                self.failure = "Overall installation time budget exhausted; refusing an incomplete image"
+                raise InstallationStopped(self.failure)
+            return remaining
+
+    def wait_turn(self):
+        while True:
+            self.remaining()
+            with self.lock:
+                now = self.clock()
+                target = max(self.next_start, self.cooldown_until)
+                if target >= self.deadline:
+                    self.failure = "Required request delay exceeds the remaining installation time budget; retry later"
+                    raise InstallationStopped(self.failure)
+                if target <= now:
+                    self.next_start = now + self.min_interval
+                    return
+                delay = target - now
+            self.sleep(min(delay, 1))
+
+    def defer_all(self, seconds):
+        with self.lock:
+            remaining = self.deadline - self.clock()
+            if seconds >= remaining:
+                self.failure = (f"Server requires a {seconds:.0f}s cooldown, exceeding the remaining "
+                                f"{max(remaining, 0):.0f}s installation budget; no early retry, retry later")
+                raise RateLimitError(self.failure)
+            self.cooldown_until = max(self.cooldown_until, self.clock() + seconds)
+
+    def pause(self, seconds):
+        target = self.clock() + seconds
+        while self.clock() < target:
+            remaining = self.remaining()
+            self.sleep(min(target - self.clock(), remaining, 1))
+
+
+def retry_after_seconds(headers):
+    value = headers.get("Retry-After") if headers else None
+    if not value:
+        return None
+    try:
+        seconds = float(value)
+    except ValueError:
+        try:
+            seconds = (parsedate_to_datetime(value) - datetime.now(timezone.utc)).total_seconds()
+        except (ValueError, TypeError, OverflowError):
+            return None
+    return max(0, seconds) if math.isfinite(seconds) else None
 
 
 def load_manifest(path: Path, min_models: int = 1) -> list[dict]:
@@ -121,8 +204,10 @@ class HTTPSRedirectHandler(urllib.request.HTTPRedirectHandler):
 
 
 def download_one(model: dict, output_dir: Path, retries: int = 4, timeout: int = 60,
-                 retry_delay: float = 2, opener=None) -> str:
+                 retry_delay: float = 2, opener=None, limiter=None) -> str:
     """Resume temporary files, verify them, then atomically expose the final filename."""
+    limiter = limiter or RequestStartLimiter(min_interval=0)
+    limiter.remaining()
     filename = model["filename"]
     destination = output_dir / filename
     partial = output_dir / f"{filename}.{model['sha256'][:12].lower()}.part"
@@ -146,12 +231,15 @@ def download_one(model: dict, output_dir: Path, retries: int = 4, timeout: int =
     last_error = "download failed"
     for attempt in range(1, retries + 1):
         retry_after = None
+        is_rate_limited = False
         offset = partial.stat().st_size if partial.exists() else 0
         headers = {"User-Agent": "character-lora-installer/1.0", "Accept": "application/octet-stream", "Accept-Encoding": "identity"}
         if offset:
             headers["Range"] = f"bytes={offset}-"
         try:
-            with opener.open(urllib.request.Request(model["downloadUrl"], headers=headers), timeout=timeout) as response:
+            limiter.wait_turn()
+            with opener.open(urllib.request.Request(model["downloadUrl"], headers=headers),
+                             timeout=min(timeout, limiter.remaining())) as response:
                 content_type = response.headers.get("Content-Type", "").lower()
                 if any(kind in content_type for kind in ("text/html", "application/json", "text/plain", "application/xhtml")):
                     raise IntegrityError("server returned an error document instead of model weights")
@@ -169,6 +257,7 @@ def download_one(model: dict, output_dir: Path, retries: int = 4, timeout: int =
                 received = 0
                 with partial.open("ab" if offset else "wb") as stream:
                     while True:
+                        limiter.remaining()
                         chunk = response.read(CHUNK_SIZE)
                         if not chunk:
                             break
@@ -185,15 +274,26 @@ def download_one(model: dict, output_dir: Path, retries: int = 4, timeout: int =
             return "downloaded"
         except urllib.error.HTTPError as exc:
             last_error = f"HTTP {exc.code}"
-            retry_header = exc.headers.get("Retry-After") if exc.headers else None
-            if retry_header:
-                try:
-                    retry_after = float(retry_header)
-                except ValueError:
-                    try:
-                        retry_after = (parsedate_to_datetime(retry_header) - datetime.now(timezone.utc)).total_seconds()
-                    except (ValueError, TypeError, OverflowError):
-                        pass
+            retry_after = retry_after_seconds(exc.headers)
+            if exc.code == 429:
+                is_rate_limited = True
+                # Recognize Civitai's documented application quota response without
+                # logging its body. This rolling daily quota cannot be fixed by a
+                # short burst backoff, so stop the entire queue immediately.
+                body = exc.read(4096).decode("utf-8", errors="replace").lower() if exc.fp else ""
+                if "we've noticed an unusual amount of downloading" in body:
+                    message = (f"{model['id']}: Civitai download quota reached; wait for the quota "
+                               "to reset or contact Civitai support. Remaining downloads were stopped")
+                    limiter.stop(message)
+                    raise RateLimitError(message) from None
+                delay = retry_after if retry_after is not None else 30 * 2 ** (attempt - 1)
+                limiter.defer_all(delay)
+                print(f"HTTP 429: pausing all request starts for {delay:.0f}s "
+                      f"({'Retry-After' if retry_after is not None else 'fallback backoff'})", flush=True)
+                if attempt == retries:
+                    message = f"{model['id']}: HTTP 429 persisted after {retries} attempts; stopped all remaining downloads, retry later"
+                    limiter.stop(message)
+                    raise RateLimitError(message) from None
             if exc.code == 416:
                 partial.unlink(missing_ok=True)
             elif exc.code not in (408, 429, 500, 502, 503, 504):
@@ -206,18 +306,27 @@ def download_one(model: dict, output_dir: Path, retries: int = 4, timeout: int =
             last_error = type(exc).__name__
         if attempt < retries:
             print(f"Retry {attempt}/{retries - 1}: {model['id']} ({last_error})", flush=True)
-            time.sleep(min(max(retry_after or 0, retry_delay * 2 ** (attempt - 1)), 60))
+            if not is_rate_limited:
+                delay = retry_after if retry_after is not None else retry_delay * 2 ** (attempt - 1)
+                if delay >= limiter.remaining():
+                    raise DownloadError(f"{model['id']}: retry delay exceeds remaining installation budget; retry later")
+                limiter.pause(delay)
     raise DownloadError(f"{model['id']}: failed after {retries} attempts ({last_error})")
 
 
-def install(models: list[dict], output_dir: Path, workers: int = 4, retries: int = 4, timeout: int = 60) -> None:
+def install(models: list[dict], output_dir: Path, workers: int = 4, retries: int = 4, timeout: int = 60,
+            min_interval: float = 5, max_elapsed: float = 1200) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     total_bytes = sum(model.get("sizeBytes", 0) for model in models)
-    print(f"Installing {len(models)} pinned models; known size {total_bytes / 1024**3:.2f} GiB; concurrency {workers}", flush=True)
+    print(f"Installing {len(models)} pinned models; known size {total_bytes / 1024**3:.2f} GiB; "
+          f"concurrency {workers}; request spacing {min_interval}s; time budget {max_elapsed}s", flush=True)
     failures = []
+    limiter = RequestStartLimiter(min_interval, max_elapsed)
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(download_one, model, output_dir, retries, timeout): model for model in models}
+        futures = {executor.submit(download_one, model, output_dir, retries, timeout, limiter=limiter): model for model in models}
         for completed, future in enumerate(concurrent.futures.as_completed(futures), 1):
+            if future.cancelled():
+                continue
             model = futures[future]
             try:
                 result = future.result()
@@ -226,6 +335,10 @@ def install(models: list[dict], output_dir: Path, workers: int = 4, retries: int
                 error = str(exc) if isinstance(exc, DownloadError) else type(exc).__name__
                 failures.append(error)
                 print(f"[{completed}/{len(models)}] ERROR {model['id']}: {error}", file=sys.stderr, flush=True)
+                if isinstance(exc, (RateLimitError, InstallationStopped)):
+                    limiter.stop(error)
+                    for pending in futures:
+                        pending.cancel()
     if failures:
         raise DownloadError(f"{len(failures)} model(s) failed; refusing an incomplete image. " + "; ".join(failures))
     print(f"Verified and installed all {len(models)} models.", flush=True)
@@ -239,10 +352,16 @@ def main(argv=None) -> int:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--retries", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=60)
+    parser.add_argument("--min-interval", type=float, default=5,
+                        help="Minimum seconds between request starts across all workers")
+    parser.add_argument("--max-elapsed", type=float, default=1200,
+                        help="Overall installation wall-clock budget in seconds")
     parser.add_argument("--validate-only", action="store_true", help="Validate metadata without downloading weights")
     args = parser.parse_args(argv)
     if not 1 <= args.workers <= 16 or not 1 <= args.retries <= 10 or args.timeout < 1 or args.min_models < 1:
         parser.error("workers must be 1..16; retries 1..10; timeout and min-models must be positive")
+    if not math.isfinite(args.min_interval) or args.min_interval < 0 or not math.isfinite(args.max_elapsed) or args.max_elapsed <= 0:
+        parser.error("min-interval must be finite and nonnegative; max-elapsed must be finite and positive")
     if not args.validate_only and not args.output_dir:
         parser.error("--output-dir is required unless --validate-only is supplied")
     try:
@@ -250,7 +369,8 @@ def main(argv=None) -> int:
         if args.validate_only:
             print(f"Valid manifest: {len(models)} pinned Illustrious models")
         else:
-            install(models, args.output_dir, args.workers, args.retries, args.timeout)
+            install(models, args.output_dir, args.workers, args.retries, args.timeout,
+                    args.min_interval, args.max_elapsed)
         return 0
     except (DownloadError, OSError, ValueError) as exc:
         print(f"Model installation failed: {exc}", file=sys.stderr)
