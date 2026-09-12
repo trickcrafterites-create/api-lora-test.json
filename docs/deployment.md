@@ -1,0 +1,45 @@
+# Character LoRA worker
+
+This image retains `runpod/worker-comfyui:5.5.1-base`, the existing WAI Illustrious v15.0 checkpoint, the rgthree custom node package, and the existing Kim Possible filename. `catalog/character-loras.json` is the shared catalog for Docker installation and the character picker. All selected LoRAs must be compatible with Illustrious; SD 1.5, Pony, FLUX, and SDXL-only releases are not interchangeable with this checkpoint.
+
+## Build and validation
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/download_loras.py --manifest catalog/character-loras.json --min-models 100 --validate-only
+docker build --platform linux/amd64 -t api-lora-test:characters-v1 .
+```
+
+The first two commands do not download weights or use a GPU. The Docker build downloads the checkpoint and every catalog LoRA. Models live in `/comfyui/models/checkpoints` and `/comfyui/models/loras`. The original worker startup command and API envelope (`input.workflow`) are inherited unchanged.
+
+The checkpoint has its own Docker layer so catalog changes can reuse it. LoRAs download directly into their final filesystem in a later layer, with four concurrent transfers. There is no second model cache or runtime download. Every file must pass a pinned SHA256 check, an exact byte-size check when available, and Safetensors header checks before an atomic rename exposes its final filename. A missing/gated file, persistent rate limit, hash mismatch, HTML login page, or truncated file fails the image build. A failed file is never silently excluded.
+
+Transfers retry at most four times with bounded exponential backoff. Interrupted `.part` files resume when the server supports HTTP ranges, and a server ignoring ranges causes a clean restart. Verified existing files are reused when running the installer against a persistent directory. Docker may discard an unsuccessful build layer, so resumption across separate hosted builds is not guaranteed.
+
+`sizeBytes` is reserved for exact file sizes. Size estimates can be stored in separate metadata fields. URLs must be public HTTPS without API tokens or account credentials. Do not put Civitai or Runpod API keys in a catalog, Docker build argument, image layer, frontend bundle, or URL. The current catalog is designed to need no download API key.
+
+## Runpod deployment
+
+The endpoint is `xjm75w7tf0ycci`. For GitHub-connected endpoints, a commit by itself does **not** deploy the new image: create a GitHub release for the configured repository/branch, then follow the endpoint's **Builds** tab through Building, Uploading, Testing, and Completed. Confirm the active image points to that release before exposing new choices to production users.
+
+As checked on 2026-09-12, Runpod documents an **80 GB image limit**, a **30-minute Docker build step**, and a **160-minute total build/upload/test window**. Check the sum of catalog sizes plus the 6.94 GB checkpoint and the worker/CUDA dependencies against the image limit. Four concurrent downloads improve throughput, but the build window still depends on upstream speed and throttling. If this limit is exceeded, build the same Dockerfile on a machine with enough disk, publish a versioned image to a container registry, and deploy that image through Runpod. Do not cut the catalog silently to make a failing build pass.
+
+The endpoint's runtime writable disk and its image size are separate operational concerns. The installer writes model weights only during image construction; inference needs runtime room for outputs and temporary files. Watch build and worker logs before adjusting storage. Larger images also take longer to download on hosts where they are not already cached.
+
+## API integration and smoke check
+
+`example-request.json` is a complete single-pass, portrait-oriented workflow using core ComfyUI nodes. It fixes the previous missing CLIP links, invalid latent inputs, invalid LoRA input name, and mismatch between the Docker filename and request filename. It returns a saved image through the worker's `output.images` array.
+
+To choose a character, set node `19` (`LoraLoader`) `inputs.lora_name` to that catalog entry's exact `filename`; set `strength_model` and `strength_clip` from the entry's recommendation or the application's defaults. Both prompt encoders use node `19`'s CLIP output, and the sampler uses its model output. Include the selected entry's trigger words in the positive prompt. For **Base model**, omit node `19` and connect the prompt encoders directly to checkpoint node `4`, output `1`, and the sampler to checkpoint node `4`, output `0`.
+
+Submit the example through a server-side Runpod client or the Runpod console after the new worker becomes ready. A real `/run` or `/runsync` job consumes GPU time. Check that the job completes and that `output.images` contains the result. Test another catalog character and Base model, then confirm that the UI sends exact catalog filenames. A valid manifest and successful offline tests do not prove GPU inference succeeded.
+
+Never expose the Runpod API key in browser code. The browser should send a selected catalog ID to your existing server; the server resolves it against its catalog and constructs the workflow. Loading filenames from an unrelated or stale catalog can cause ComfyUI's `value not in list` validation error.
+
+## Sources
+
+- [Runpod GitHub integration and current build limits](https://docs.runpod.io/serverless/workers/github-integration)
+- [Runpod versioned Docker image deployment](https://docs.runpod.io/serverless/workers/deploy)
+- [Worker ComfyUI 5.5.1 API format](https://github.com/runpod-workers/worker-comfyui/blob/5.5.1/README.md)
+- [Worker ComfyUI 5.5.1 Dockerfile and installation paths](https://github.com/runpod-workers/worker-comfyui/blob/5.5.1/Dockerfile)
+- [Runpod Serverless storage options](https://docs.runpod.io/serverless/storage/overview)

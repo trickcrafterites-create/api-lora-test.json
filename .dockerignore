@@ -1,0 +1,9 @@
+.git
+__pycache__
+**/__pycache__
+*.pyc
+*.safetensors
+*.part
+tests
+docs
+node_modules

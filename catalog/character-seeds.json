@@ -1,0 +1,1135 @@
+{
+  "schemaVersion": 1,
+  "characters": [
+    {
+      "modelId": 1429821,
+      "modelVersionId": 1835277,
+      "fileId": 1735405,
+      "name": "2B",
+      "franchise": "NieR: Automata",
+      "triggerWords": [
+        "2b (nier:automata)"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1486174,
+      "modelVersionId": 1681083,
+      "fileId": 1582151,
+      "name": "Ada Wong",
+      "franchise": "Resident Evil",
+      "triggerWords": [
+        "adasweater"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 955927,
+      "modelVersionId": 1096827,
+      "fileId": 1001834,
+      "name": "Ai Hoshino",
+      "franchise": "Oshi no Ko",
+      "triggerWords": [
+        "hoshino ai"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2106920,
+      "modelVersionId": 2383812,
+      "fileId": 2273840,
+      "name": "Aisha Udgard",
+      "franchise": "How a Realist Hero Rebuilt the Kingdom",
+      "triggerWords": [],
+      "strength": 0.8
+    },
+    {
+      "modelId": 962780,
+      "modelVersionId": 2810868,
+      "fileId": 2696675,
+      "name": "Akane Kurokawa",
+      "franchise": "Oshi no Ko",
+      "triggerWords": [
+        "kurokawa akane"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1128462,
+      "modelVersionId": 1624335,
+      "fileId": 1524480,
+      "name": "Alina Clover",
+      "franchise": "I May Be a Guild Receptionist",
+      "triggerWords": [
+        "alnclv-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1297524,
+      "modelVersionId": 1464422,
+      "fileId": 1365636,
+      "name": "Alma",
+      "franchise": "Monster Hunter Wilds",
+      "triggerWords": [
+        "monster_hunter_wilds_alma",
+        "mnstrhntrwldslm"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 972465,
+      "modelVersionId": 1700380,
+      "fileId": 1601192,
+      "name": "Android 18",
+      "franchise": "Dragon Ball",
+      "triggerWords": [
+        "android 18"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 859113,
+      "modelVersionId": 1565606,
+      "fileId": 1465408,
+      "name": "Anna Yanami",
+      "franchise": "Too Many Losing Heroines!",
+      "triggerWords": [
+        "anna-default",
+        "yanami anna"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1027497,
+      "modelVersionId": 2542764,
+      "fileId": 2430957,
+      "name": "Anya Forger",
+      "franchise": "SPY x FAMILY",
+      "triggerWords": [
+        "anya (spy x family)"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1462359,
+      "modelVersionId": 1682558,
+      "fileId": 1583653,
+      "name": "Aris Tendou",
+      "franchise": "Blue Archive",
+      "triggerWords": [
+        "aris-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 946720,
+      "modelVersionId": 1059964,
+      "fileId": 965501,
+      "name": "Arisu Tachibana",
+      "franchise": "The iDOLM@STER Cinderella Girls",
+      "triggerWords": [
+        "tachibana arisu"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1047702,
+      "modelVersionId": 2542774,
+      "fileId": 2430967,
+      "name": "Becky Blackbell",
+      "franchise": "SPY x FAMILY",
+      "triggerWords": [
+        "becky blackbell"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1395245,
+      "modelVersionId": 1577115,
+      "fileId": 1476851,
+      "name": "Bready",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "brdy"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1292157,
+      "modelVersionId": 1484428,
+      "fileId": 1384683,
+      "name": "Bulma",
+      "franchise": "Dragon Ball",
+      "triggerWords": [
+        "bulma"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 866095,
+      "modelVersionId": 1239263,
+      "fileId": 1144524,
+      "name": "Celia Claire",
+      "franchise": "Spirit Chronicles",
+      "triggerWords": [
+        "celia-season2",
+        "celia claire"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2329750,
+      "modelVersionId": 2620727,
+      "fileId": 2508481,
+      "name": "Chen Qianyu",
+      "franchise": "Arknights: Endfield",
+      "triggerWords": [
+        "Chen Qianyu"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 958026,
+      "modelVersionId": 1730584,
+      "fileId": 1631219,
+      "name": "Chi-Chi",
+      "franchise": "Dragon Ball",
+      "triggerWords": [
+        "chi-chi"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1058718,
+      "modelVersionId": 1203970,
+      "fileId": 1109223,
+      "name": "Chinatsu Kano",
+      "franchise": "Blue Box",
+      "triggerWords": [
+        "kano chinatsu"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1762845,
+      "modelVersionId": 1995009,
+      "fileId": 1892174,
+      "name": "Chloe von Einzbern",
+      "franchise": "Fate/kaleid liner Prisma Illya",
+      "triggerWords": [
+        "Chloe"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1019635,
+      "modelVersionId": 1143344,
+      "fileId": 1048378,
+      "name": "Cinderella",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "cindef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1168049,
+      "modelVersionId": 1314089,
+      "fileId": 1218170,
+      "name": "Crown",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "crwndf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2298875,
+      "modelVersionId": 2649912,
+      "fileId": 2537647,
+      "name": "Cure Answer",
+      "franchise": "Meitantei Precure!",
+      "triggerWords": [
+        "cureanswer"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2299086,
+      "modelVersionId": 2851375,
+      "fileId": 2737459,
+      "name": "Cure Arcana Shadow",
+      "franchise": "Meitantei Precure!",
+      "triggerWords": [
+        "curearcanashadow"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2299185,
+      "modelVersionId": 3166595,
+      "fileId": 3047006,
+      "name": "Cure Eclair",
+      "franchise": "Meitantei Precure!",
+      "triggerWords": [
+        "cureeclair"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1199170,
+      "modelVersionId": 2244609,
+      "fileId": 2136964,
+      "name": "Cure Idol",
+      "franchise": "Kimi to Idol Precure",
+      "triggerWords": [
+        "cureidol"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1216915,
+      "modelVersionId": 2244625,
+      "fileId": 2136989,
+      "name": "Cure Wink",
+      "franchise": "Kimi to Idol Precure",
+      "triggerWords": [
+        "curewink"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1467265,
+      "modelVersionId": 1659482,
+      "fileId": 1560515,
+      "name": "Dorothy",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "drthdf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1327407,
+      "modelVersionId": 2439947,
+      "fileId": 2330738,
+      "name": "Ema Aizawa",
+      "franchise": "VSPO!",
+      "triggerWords": [
+        "EmaDefault"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1431314,
+      "modelVersionId": 1642054,
+      "fileId": 1542475,
+      "name": "Emma Frost",
+      "franchise": "Marvel Rivals",
+      "triggerWords": [
+        "tsinne"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1179892,
+      "modelVersionId": 1327752,
+      "fileId": 1231648,
+      "name": "Evelyn Chevalier",
+      "franchise": "Zenless Zone Zero",
+      "triggerWords": [
+        "zenless_zone_zero_evelyn",
+        "znlessznzrvlyn"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1140194,
+      "modelVersionId": 2135711,
+      "fileId": 2029528,
+      "name": "Evernight / March 7th",
+      "franchise": "Honkai: Star Rail",
+      "triggerWords": [
+        "Evernight",
+        "Evernightdef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1049397,
+      "modelVersionId": 2542784,
+      "fileId": 2430975,
+      "name": "Fiona Frost",
+      "franchise": "SPY x FAMILY",
+      "triggerWords": [
+        "fiona frost"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1148092,
+      "modelVersionId": 1291255,
+      "fileId": 1195761,
+      "name": "Firefly",
+      "franchise": "Honkai: Star Rail",
+      "triggerWords": [
+        "Fireflydef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1127364,
+      "modelVersionId": 3154896,
+      "fileId": 3035687,
+      "name": "Flandre Scarlet",
+      "franchise": "Touhou Project",
+      "triggerWords": [
+        "flandre scarlet"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 468686,
+      "modelVersionId": 1190237,
+      "fileId": 1095439,
+      "name": "Gardevoir",
+      "franchise": "Pokemon",
+      "triggerWords": [
+        "Gardevoir"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1052666,
+      "modelVersionId": 1181189,
+      "fileId": 1089686,
+      "name": "Gwen Tennyson",
+      "franchise": "Ben 10",
+      "triggerWords": [
+        "Gwen_Tennyson"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 917380,
+      "modelVersionId": 1061435,
+      "fileId": 966895,
+      "name": "Hana Uzaki",
+      "franchise": "Uzaki-chan Wants to Hang Out!",
+      "triggerWords": [
+        "uzaki hana"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 405278,
+      "modelVersionId": 1213588,
+      "fileId": 1118970,
+      "name": "Hayase Nagatoro",
+      "franchise": "Don't Toy With Me, Miss Nagatoro",
+      "triggerWords": [
+        "nagatoro hayase"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1200810,
+      "modelVersionId": 1352133,
+      "fileId": 1255428,
+      "name": "Helen Parr / Elastigirl",
+      "franchise": "The Incredibles",
+      "triggerWords": [
+        "helenp",
+        "helen parr",
+        "elastigirl"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1215490,
+      "modelVersionId": 1369180,
+      "fileId": 1272139,
+      "name": "Helm",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "hlmdf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1282238,
+      "modelVersionId": 2472457,
+      "fileId": 2361067,
+      "name": "Hermione Granger",
+      "franchise": "Harry Potter",
+      "triggerWords": [
+        "hermione_hp"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 912054,
+      "modelVersionId": 1020687,
+      "fileId": 926321,
+      "name": "Hikari Tachibana",
+      "franchise": "Blue Archive",
+      "triggerWords": [
+        "hikari-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1580254,
+      "modelVersionId": 1789316,
+      "fileId": 1689958,
+      "name": "Hinano Tachibana",
+      "franchise": "VSPO!",
+      "triggerWords": [
+        "HinanoDefault"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 91861,
+      "modelVersionId": 1244155,
+      "fileId": 1149471,
+      "name": "Hinata Hyuga",
+      "franchise": "Naruto Shippuden",
+      "triggerWords": [
+        "ChopioHinata"
+      ],
+      "strength": 0.85
+    },
+    {
+      "modelId": 1015186,
+      "modelVersionId": 1138174,
+      "fileId": 1043113,
+      "name": "Hiro Shinosawa",
+      "franchise": "Gakuen iDOLM@STER",
+      "triggerWords": [
+        "hiro-default",
+        "shinosawa hiro"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1058938,
+      "modelVersionId": 1188303,
+      "fileId": 1093494,
+      "name": "Ibuki Tanga",
+      "franchise": "Blue Archive",
+      "triggerWords": [
+        "ibuki-jacket"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1707826,
+      "modelVersionId": 1932645,
+      "fileId": 1830505,
+      "name": "Illyasviel von Einzbern",
+      "franchise": "Fate/kaleid liner Prisma Illya",
+      "triggerWords": [
+        "Illya"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1128520,
+      "modelVersionId": 1536845,
+      "fileId": 1436801,
+      "name": "Inori Yuitsuka",
+      "franchise": "Medalist",
+      "triggerWords": [
+        "inori-default",
+        "yuitsuka inori"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1042202,
+      "modelVersionId": 2810857,
+      "fileId": 2696656,
+      "name": "Kana Arima",
+      "franchise": "Oshi no Ko",
+      "triggerWords": [
+        "arima kana"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2004809,
+      "modelVersionId": 2269501,
+      "fileId": 2161616,
+      "name": "Kaoru Kamiya",
+      "franchise": "Rurouni Kenshin",
+      "triggerWords": [
+        "Kamiya Kaoru"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1060298,
+      "modelVersionId": 1189874,
+      "fileId": 1095058,
+      "name": "Keqing",
+      "franchise": "Genshin Impact",
+      "triggerWords": [
+        "kqngdf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1065259,
+      "modelVersionId": 1195575,
+      "fileId": 1100862,
+      "name": "Kisaki Ryuuge",
+      "franchise": "Blue Archive",
+      "triggerWords": [
+        "kisaki-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1487403,
+      "modelVersionId": 1682497,
+      "fileId": 1583588,
+      "name": "Koharu Shimoe",
+      "franchise": "Blue Archive",
+      "triggerWords": [
+        "koharu-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1058083,
+      "modelVersionId": 1187325,
+      "fileId": 1092510,
+      "name": "Kotone Fujita",
+      "franchise": "Gakuen iDOLM@STER",
+      "triggerWords": [
+        "kotone-default",
+        "fujita kotone"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1464135,
+      "modelVersionId": 2871476,
+      "fileId": 2753676,
+      "name": "Kyouka",
+      "franchise": "Princess Connect! Re:Dive",
+      "triggerWords": [
+        "pcrkyoka"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 621508,
+      "modelVersionId": 2047811,
+      "fileId": 1944735,
+      "name": "Link",
+      "franchise": "The Legend of Zelda",
+      "triggerWords": [
+        "link"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1036986,
+      "modelVersionId": 1163164,
+      "fileId": 1068319,
+      "name": "Mahiro Oyama",
+      "franchise": "ONIMAI",
+      "triggerWords": [
+        "mahiro-roomwear",
+        "oyama mahiro"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1019633,
+      "modelVersionId": 1143339,
+      "fileId": 1048376,
+      "name": "Maiden",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "mdndef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1065535,
+      "modelVersionId": 1195902,
+      "fileId": 1101192,
+      "name": "Marciana",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "marcianadef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 779892,
+      "modelVersionId": 2301375,
+      "fileId": 2192352,
+      "name": "Marie Rose",
+      "franchise": "Dead or Alive",
+      "triggerWords": [
+        "marie rose"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 684770,
+      "modelVersionId": 3128825,
+      "fileId": 3009355,
+      "name": "Marinette Dupain-Cheng / Ladybug",
+      "franchise": "Miraculous",
+      "triggerWords": [],
+      "strength": 0.65
+    },
+    {
+      "modelId": 2629210,
+      "modelVersionId": 3224110,
+      "fileId": 3106185,
+      "name": "Mellow",
+      "franchise": "Wrap Knights",
+      "triggerWords": [
+        "AF_WrapKinghts_Mellow"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 442186,
+      "modelVersionId": 1210143,
+      "fileId": 1115695,
+      "name": "Mikasa Ackerman",
+      "franchise": "Attack on Titan",
+      "triggerWords": [
+        "mikasa_ackerman"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1704570,
+      "modelVersionId": 1929015,
+      "fileId": 1828542,
+      "name": "Mira",
+      "franchise": "K-Pop Demon Hunters",
+      "triggerWords": [
+        "M1r4KP0P"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1631650,
+      "modelVersionId": 2514139,
+      "fileId": 2401983,
+      "name": "Misora",
+      "franchise": "Princess Connect! Re:Dive",
+      "triggerWords": [
+        "pcrmsra",
+        "pmsradef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1060071,
+      "modelVersionId": 1237445,
+      "fileId": 1142666,
+      "name": "Mita",
+      "franchise": "MiSide",
+      "triggerWords": [
+        "Mita"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 91840,
+      "modelVersionId": 1261939,
+      "fileId": 1167031,
+      "name": "Mitsuri Kanroji",
+      "franchise": "Demon Slayer",
+      "triggerWords": [
+        "ChopioM1tsuri"
+      ],
+      "strength": 0.7
+    },
+    {
+      "modelId": 1759947,
+      "modelVersionId": 1991781,
+      "fileId": 1888920,
+      "name": "Miyu Edelfelt",
+      "franchise": "Fate/kaleid liner Prisma Illya",
+      "triggerWords": [
+        "Miyu"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 933301,
+      "modelVersionId": 2624230,
+      "fileId": 2511805,
+      "name": "Mizumiya Su",
+      "franchise": "Hololive",
+      "triggerWords": [
+        "mizumiyasu"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1340394,
+      "modelVersionId": 1513668,
+      "fileId": 1413879,
+      "name": "Modernia",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "moderniadef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 942367,
+      "modelVersionId": 1064605,
+      "fileId": 970091,
+      "name": "Momo Ayase",
+      "franchise": "Dandadan",
+      "triggerWords": [
+        "ChopioMomo"
+      ],
+      "strength": 0.7
+    },
+    {
+      "modelId": 1017067,
+      "modelVersionId": 1140381,
+      "fileId": 1045341,
+      "name": "Mythra",
+      "franchise": "Xenoblade Chronicles 2",
+      "triggerWords": [
+        "mthrdef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1252857,
+      "modelVersionId": 1412426,
+      "fileId": 1314624,
+      "name": "Nezuko Kamado",
+      "franchise": "Demon Slayer",
+      "triggerWords": [
+        "nezukochan"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1157558,
+      "modelVersionId": 1301963,
+      "fileId": 1206219,
+      "name": "Orihime Inoue",
+      "franchise": "Bleach",
+      "triggerWords": [
+        "inrhmdf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 949620,
+      "modelVersionId": 2753074,
+      "fileId": 2639470,
+      "name": "Pecorine",
+      "franchise": "Princess Connect! Re:Dive",
+      "triggerWords": [
+        "pcrpeco",
+        "pecodef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 2329377,
+      "modelVersionId": 2620310,
+      "fileId": 2508141,
+      "name": "Perlica",
+      "franchise": "Arknights: Endfield",
+      "triggerWords": [
+        "Perlita"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 91825,
+      "modelVersionId": 1393168,
+      "fileId": 1295566,
+      "name": "Princess Zelda",
+      "franchise": "The Legend of Zelda",
+      "triggerWords": [
+        "ChopioZelda"
+      ],
+      "strength": 0.7
+    },
+    {
+      "modelId": 1273499,
+      "modelVersionId": 1436697,
+      "fileId": 1337930,
+      "name": "Privaty",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "privdf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1017066,
+      "modelVersionId": 1140380,
+      "fileId": 1045331,
+      "name": "Pyra",
+      "franchise": "Xenoblade Chronicles 2",
+      "triggerWords": [
+        "prdef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1395548,
+      "modelVersionId": 1577428,
+      "fileId": 1477153,
+      "name": "Rapunzel",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "rpnzldef"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 373967,
+      "modelVersionId": 1357021,
+      "fileId": 1260286,
+      "name": "Reisalin Stout / Ryza",
+      "franchise": "Atelier Ryza",
+      "triggerWords": [
+        "reisalin stout"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1450442,
+      "modelVersionId": 1639932,
+      "fileId": 1542007,
+      "name": "Revy",
+      "franchise": "Black Lagoon",
+      "triggerWords": [
+        "Revy (character)"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 392486,
+      "modelVersionId": 1189464,
+      "fileId": 1094784,
+      "name": "Rimuru Tempest",
+      "franchise": "That Time I Got Reincarnated as a Slime",
+      "triggerWords": [
+        "rimuru_tempest"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1155590,
+      "modelVersionId": 1299675,
+      "fileId": 1203904,
+      "name": "Roxy Migurdia",
+      "franchise": "Mushoku Tensei",
+      "triggerWords": [
+        "roxy-default",
+        "roxy migurdia"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 955545,
+      "modelVersionId": 2810860,
+      "fileId": 2696662,
+      "name": "Ruby Hoshino",
+      "franchise": "Oshi no Ko",
+      "triggerWords": [
+        "hoshino ruby"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1615349,
+      "modelVersionId": 1828148,
+      "fileId": 1729044,
+      "name": "Rumi",
+      "franchise": "K-Pop Demon Hunters",
+      "triggerWords": [
+        "Rum1KP0P"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1342767,
+      "modelVersionId": 2540886,
+      "fileId": 2429026,
+      "name": "Runa Shinomiya",
+      "franchise": "VSPO!",
+      "triggerWords": [
+        "ShinomiyAngel"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1133848,
+      "modelVersionId": 2401473,
+      "fileId": 2291872,
+      "name": "Sakuya Izayoi",
+      "franchise": "Touhou Project",
+      "triggerWords": [
+        "izayoi sakuya"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1171460,
+      "modelVersionId": 2377116,
+      "fileId": 2267655,
+      "name": "Satori Komeiji",
+      "franchise": "Touhou Project",
+      "triggerWords": [
+        "komeiji satori"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1416345,
+      "modelVersionId": 1600882,
+      "fileId": 1500852,
+      "name": "Scarlet",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "scrltdf"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 831426,
+      "modelVersionId": 1914522,
+      "fileId": 1812913,
+      "name": "Seiko Ayase",
+      "franchise": "Dandadan",
+      "triggerWords": [
+        "seiko_wz"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1082590,
+      "modelVersionId": 1215571,
+      "fileId": 1120915,
+      "name": "Shigure Ui",
+      "franchise": "Shigure Ui",
+      "triggerWords": [
+        "ui-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1204238,
+      "modelVersionId": 1385098,
+      "fileId": 1287769,
+      "name": "Shirakami Fubuki",
+      "franchise": "Hololive",
+      "triggerWords": [
+        "fbk_base"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1739002,
+      "modelVersionId": 1968062,
+      "fileId": 1865534,
+      "name": "Sora",
+      "franchise": "Goddess of Victory: NIKKE",
+      "triggerWords": [
+        "srnk"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1218512,
+      "modelVersionId": 2972989,
+      "fileId": 2852595,
+      "name": "Tsuna Nekota",
+      "franchise": "VSPO!",
+      "triggerWords": [],
+      "strength": 0.8
+    },
+    {
+      "modelId": 412136,
+      "modelVersionId": 1075687,
+      "fileId": 980767,
+      "name": "Tsunade",
+      "franchise": "Naruto Shippuden",
+      "triggerWords": [
+        "ChopioTsunade"
+      ],
+      "strength": 0.7
+    },
+    {
+      "modelId": 940615,
+      "modelVersionId": 1218167,
+      "fileId": 1123519,
+      "name": "Videl",
+      "franchise": "Dragon Ball",
+      "triggerWords": [
+        "videl"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1022054,
+      "modelVersionId": 2542753,
+      "fileId": 2430947,
+      "name": "Yor Forger",
+      "franchise": "SPY x FAMILY",
+      "triggerWords": [
+        "yor briar"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1189744,
+      "modelVersionId": 2985562,
+      "fileId": 2865079,
+      "name": "Yukari Yakumo",
+      "franchise": "Touhou Project",
+      "triggerWords": [
+        "yakumo yukari"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1259576,
+      "modelVersionId": 1420270,
+      "fileId": 1322030,
+      "name": "Yuni",
+      "franchise": "Princess Connect! Re:Dive",
+      "triggerWords": [
+        "yuni-default"
+      ],
+      "strength": 0.8
+    },
+    {
+      "modelId": 1704581,
+      "modelVersionId": 1929026,
+      "fileId": 1829548,
+      "name": "Zoey",
+      "franchise": "K-Pop Demon Hunters",
+      "triggerWords": [
+        "Z03yKP0P"
+      ],
+      "strength": 0.8
+    }
+  ]
+}

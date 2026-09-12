@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "baseModel": "Illustrious",
+  "models": [
+    {
+      "id": "wai-illustrious-v150",
+      "name": "WAI Illustrious v15.0 (existing checkpoint)",
+      "filename": "waiNSFWIllustrious_v150.safetensors",
+      "downloadUrl": "https://huggingface.co/nnnn1111/models-moved/resolve/f04b87e20ed4d0d3f9526feb998d3a019b5c8616/waiNSFWIllustrious_v150.safetensors",
+      "sha256": "befc694a296f75e996488ebf9f9db8a1493bd059b6e704b975829e87d5aeb4fa",
+      "sizeBytes": 6938040682,
+      "sourceUrl": "https://huggingface.co/nnnn1111/models-moved",
+      "hashSource": "Hugging Face API LFS oid, verified 2026-09-12",
+      "repositoryRevision": "f04b87e20ed4d0d3f9526feb998d3a019b5c8616"
+    }
+  ]
+}

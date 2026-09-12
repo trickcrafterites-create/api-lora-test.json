@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*.safetensors
+*.part
+.env
+.env.*
+node_modules/

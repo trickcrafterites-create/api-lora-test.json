@@ -12,7 +12,11 @@
       },
       "5": {
         "inputs": {
-          "text": "recent, old, oldest, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, long body, lowres, bad anatomy, bad hands, missing fingers, extra fingers, extra digits, fewer digits, cropped, very displeasing, (worst quality, bad quality:1.2), sketch, jpeg artifacts, signature, watermark, username, (censored, bar_censor, mosaic_censor:1.2), conjoined, bad ai-generated, muscular, lamp, teeth, pool ladder, watermark, yellow tint,\n"
+          "text": "recent, old, oldest, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured, long body, lowres, bad anatomy, bad hands, missing fingers, extra fingers, extra digits, fewer digits, cropped, very displeasing, (worst quality, bad quality:1.2), sketch, jpeg artifacts, signature, watermark, username, (censored, bar_censor, mosaic_censor:1.2), conjoined, bad ai-generated, muscular, lamp, teeth, pool ladder, watermark, yellow tint,\n",
+          "clip": [
+            "19",
+            1
+          ]
         },
         "class_type": "CLIPTextEncode",
         "_meta": {
@@ -21,7 +25,11 @@
       },
       "6": {
         "inputs": {
-          "text": ""
+          "text": "kimp, solo, fully clothed, casual outfit, standing in a sunny park, friendly smile, best quality",
+          "clip": [
+            "19",
+            1
+          ]
         },
         "class_type": "CLIPTextEncode",
         "_meta": {
@@ -30,23 +38,13 @@
       },
       "9": {
         "inputs": {
-          "value": 1216
+          "width": 832,
+          "height": 1216,
+          "batch_size": 1
         },
         "class_type": "EmptyLatentImage",
         "_meta": {
           "title": "EmptyLatentImage"
-        }
-      },
-      "10": {
-        "inputs": {
-          "images": [
-            "11",
-            0
-          ]
-        },
-        "class_type": "PreviewImage",
-        "_meta": {
-          "title": "PreviewImage"
         }
       },
       "11": {
@@ -68,10 +66,10 @@
       "12": {
         "inputs": {
           "seed": 0,
-          "steps": 20,
-          "cfg": 8,
-          "sampler_name": "euler",
-          "scheduler": "simple",
+          "steps": 25,
+          "cfg": 5,
+          "sampler_name": "euler_ancestral",
+          "scheduler": "normal",
           "denoise": 1,
           "model": [
             "19",
@@ -95,82 +93,11 @@
           "title": "KSampler"
         }
       },
-      "13": {
-        "inputs": {
-          "seed": 0,
-          "steps": 20,
-          "cfg": 8,
-          "sampler_name": "euler",
-          "scheduler": "simple",
-          "denoise": 1,
-          "model": [
-            "19",
-            0
-          ],
-          "positive": [
-            "6",
-            0
-          ],
-          "negative": [
-            "5",
-            0
-          ],
-          "latent_image": [
-            "16",
-            0
-          ]
-        },
-        "class_type": "KSampler",
-        "_meta": {
-          "title": "KSampler"
-        }
-      },
-      "14": {
-        "inputs": {
-          "pixels": [
-            "11",
-            0
-          ]
-        },
-        "class_type": "VAEEncode",
-        "_meta": {
-          "title": "VAEEncode"
-        }
-      },
-      "16": {
-        "inputs": {
-          "text": "nearest-exact",
-          "samples": [
-            "14",
-            0
-          ]
-        },
-        "class_type": "LatentUpscaleBy",
-        "_meta": {
-          "title": "LatentUpscaleBy"
-        }
-      },
-      "17": {
-        "inputs": {
-          "samples": [
-            "13",
-            0
-          ],
-          "vae": [
-            "4",
-            2
-          ]
-        },
-        "class_type": "VAEDecode",
-        "_meta": {
-          "title": "VAEDecode"
-        }
-      },
       "18": {
         "inputs": {
           "filename_prefix": "ComfyUI",
           "images": [
-            "17",
+            "11",
             0
           ]
         },
@@ -181,15 +108,21 @@
       },
       "19": {
         "inputs": {
-          "filename": "KimPossible-ArtStyle.safetensors",
+          "lora_name": "KimPossibleIllustrious2.0JLFO.safetensors",
+          "strength_model": 0.8,
+          "strength_clip": 0.8,
           "model": [
             "4",
             0
+          ],
+          "clip": [
+            "4",
+            1
           ]
         },
-        "class_type": "LoraLoaderModelOnly",
+        "class_type": "LoraLoader",
         "_meta": {
-          "title": "LoraLoaderModelOnly"
+          "title": "Selected character LoRA"
         }
       }
     }

@@ -1,0 +1,4313 @@
+{
+  "schemaVersion": 1,
+  "baseModel": "Illustrious",
+  "generatedAt": "2026-09-12T13:35:52Z",
+  "source": "https://civitai.red/models?tag=character",
+  "metadataApi": "https://civitai.com/api/v1/models",
+  "modelCount": 103,
+  "totalSizeBytes": 15429671796,
+  "selectionNotes": [
+    "Exact Illustrious base model; character LoRA; primary SafeTensor file; SHA256 pinned.",
+    "102 curated distinct character identities, including fictional VTuber avatars; generic styles and duplicate character outfits excluded.",
+    "Every newly selected Civitai source grants third-party generation-service use through allowCommercialUse=Rent. The retained legacy Kim Possible model has unknown source permissions.",
+    "Download response and first eight bytes checked without authentication; full-file SHA256 is verified by the installer.",
+    "Concise activation tokens are selected from source trained words or version instructions. Empty triggerWords means no concise activation token was published.",
+    "New Civitai weights were not downloaded in full during catalog collection. The existing Kim Possible was fully downloaded and hash-verified. Render quality has not been tested on a GPU.",
+    "Civitai.red API returned HTTP403; canonical Civitai.com API supplied metadata and stable version download URLs."
+  ],
+  "models": [
+    {
+      "id": "civitai-1429821-1835277",
+      "name": "2B",
+      "franchise": "NieR: Automata",
+      "filename": "2b-1835277.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "2b (nier:automata)"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1429821,
+      "modelVersionId": 1835277,
+      "fileId": 1735405,
+      "sourceUrl": "https://civitai.red/models/1429821?modelVersionId=1835277",
+      "metadataUrl": "https://civitai.com/api/v1/models/1429821",
+      "sourceModelName": "2B from Nier: Automata Ver1.1a",
+      "versionName": "v2.0 (remake)",
+      "creator": "NeogenArt",
+      "downloadUrl": "https://civitai.com/api/download/models/1835277",
+      "sha256": "903251e3b2ffd6950ae92948cf81c47cbf7e663a6395ade299c1eed76ae74207",
+      "sizeBytes": 228457844,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "Rent",
+          "RentCivit"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 423352,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1486174-1681083",
+      "name": "Ada Wong",
+      "franchise": "Resident Evil",
+      "filename": "ada-wong-1681083.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "adasweater"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1486174,
+      "modelVersionId": 1681083,
+      "fileId": 1582151,
+      "sourceUrl": "https://civitai.red/models/1486174?modelVersionId=1681083",
+      "metadataUrl": "https://civitai.com/api/v1/models/1486174",
+      "sourceModelName": "Ada Wong (Resident Evil) SDXL LoRA [Illustrious] | 4 Outfits",
+      "versionName": "ada-re-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1681083",
+      "sha256": "0a9c4914abfdfebf169c990b9324a8229bf9aa92eeab9d4b6385f9dad5d5b786",
+      "sizeBytes": 57446604,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 436496,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-955927-1096827",
+      "name": "Ai Hoshino",
+      "franchise": "Oshi no Ko",
+      "filename": "ai-hoshino-1096827.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "hoshino ai"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 955927,
+      "modelVersionId": 1096827,
+      "fileId": 1001834,
+      "sourceUrl": "https://civitai.red/models/955927?modelVersionId=1096827",
+      "metadataUrl": "https://civitai.com/api/v1/models/955927",
+      "sourceModelName": "Hoshino Ai | Oshi no Ko | 推しの子",
+      "versionName": "v1.1",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/1096827",
+      "sha256": "1a9272af93bb4e9dddd60170437904b3fcaee0db26b7cdb2729264fa62718d4a",
+      "sizeBytes": 114440292,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 422056,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2106920-2383812",
+      "name": "Aisha Udgard",
+      "franchise": "How a Realist Hero Rebuilt the Kingdom",
+      "filename": "aisha-udgard-2383812.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2106920,
+      "modelVersionId": 2383812,
+      "fileId": 2273840,
+      "sourceUrl": "https://civitai.red/models/2106920?modelVersionId=2383812",
+      "metadataUrl": "https://civitai.com/api/v1/models/2106920",
+      "sourceModelName": "How a Realist Hero Rebuilt the Kingdom models [Illustrious]",
+      "versionName": "Aisha Udgard",
+      "creator": "AnimeGuy01",
+      "downloadUrl": "https://civitai.com/api/download/models/2383812",
+      "sha256": "9629f20a729e1c915a1ac99b9fa089d0d7879828a0feafc7a46db32a5285735e",
+      "sizeBytes": 228458668,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 424176,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-962780-2810868",
+      "name": "Akane Kurokawa",
+      "franchise": "Oshi no Ko",
+      "filename": "akane-kurokawa-2810868.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "kurokawa akane"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 962780,
+      "modelVersionId": 2810868,
+      "fileId": 2696675,
+      "sourceUrl": "https://civitai.red/models/962780?modelVersionId=2810868",
+      "metadataUrl": "https://civitai.com/api/v1/models/962780",
+      "sourceModelName": "Kurokawa Akane | Oshi no Ko | 推しの子",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2810868",
+      "sha256": "8983727482cf22ae6c90de7964afa99397daec9df1d288326fffae57665a8ca4",
+      "sizeBytes": 114442860,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 424624,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1128462-1624335",
+      "name": "Alina Clover",
+      "franchise": "I May Be a Guild Receptionist",
+      "filename": "alina-clover-1624335.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "alnclv-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1128462,
+      "modelVersionId": 1624335,
+      "fileId": 1524480,
+      "sourceUrl": "https://civitai.red/models/1128462?modelVersionId=1624335",
+      "metadataUrl": "https://civitai.com/api/v1/models/1128462",
+      "sourceModelName": "IllustriousXL - Alina Clover アリナ･クローバー - guild no uketsukejou desu ga, zangyou wa iya nanode boss wo solo toubatsu shiyou to omoimasu",
+      "versionName": "v1.1 4衣装Lora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1624335",
+      "sha256": "9776a6782afbb45c030fa6eb9388866c1b51ad3fefe3501a8ca25833919d6f39",
+      "sizeBytes": 177190584,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 364680,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1297524-1464422",
+      "name": "Alma",
+      "franchise": "Monster Hunter Wilds",
+      "filename": "alma-1464422.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "monster_hunter_wilds_alma",
+        "mnstrhntrwldslm"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1297524,
+      "modelVersionId": 1464422,
+      "fileId": 1365636,
+      "sourceUrl": "https://civitai.red/models/1297524?modelVersionId=1464422",
+      "metadataUrl": "https://civitai.com/api/v1/models/1297524",
+      "sourceModelName": "Alma - Monster Hunter Wilds MHW - アルマ - モンスターハンター ワイルズ - モンハン",
+      "versionName": "v1.0",
+      "creator": "news_v_com",
+      "downloadUrl": "https://civitai.com/api/download/models/1464422",
+      "sha256": "4c6c0f1e8cff316da657740e3a3b3be76352483e307a5ed8b4fb56592358d869",
+      "sizeBytes": 228456612,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 422120,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-972465-1700380",
+      "name": "Android 18",
+      "franchise": "Dragon Ball",
+      "filename": "android-18-1700380.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "android 18"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 972465,
+      "modelVersionId": 1700380,
+      "fileId": 1601192,
+      "sourceUrl": "https://civitai.red/models/972465?modelVersionId=1700380",
+      "metadataUrl": "https://civitai.com/api/v1/models/972465",
+      "sourceModelName": "Android 18 - Dragon Ball",
+      "versionName": "Illustrious v2.0",
+      "creator": "HellKaiza",
+      "downloadUrl": "https://civitai.com/api/download/models/1700380",
+      "sha256": "f46a5755b6623fd760970cc03d1ca4efb39f9f3e7b166556fc6bc4eb02c764a5",
+      "sizeBytes": 228478764,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 444272,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-859113-1565606",
+      "name": "Anna Yanami",
+      "franchise": "Too Many Losing Heroines!",
+      "filename": "anna-yanami-1565606.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "anna-default",
+        "yanami anna"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 859113,
+      "modelVersionId": 1565606,
+      "fileId": 1465408,
+      "sourceUrl": "https://civitai.red/models/859113?modelVersionId=1565606",
+      "metadataUrl": "https://civitai.com/api/v1/models/859113",
+      "sourceModelName": "IllustriousXL - Yanami Anna 八奈見 杏菜 - make heroine ga oo sugiru!",
+      "versionName": "v1.1 7衣装",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1565606",
+      "sha256": "6c90acfb4d50e49ec7d1f014bdc4e161300ffd57870d20a2c6b0ba4cc983213b",
+      "sizeBytes": 177190264,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent",
+          "Image"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 364360,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1027497-2542764",
+      "name": "Anya Forger",
+      "franchise": "SPY x FAMILY",
+      "filename": "anya-forger-2542764.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "anya (spy x family)"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1027497,
+      "modelVersionId": 2542764,
+      "fileId": 2430957,
+      "sourceUrl": "https://civitai.red/models/1027497?modelVersionId=2542764",
+      "metadataUrl": "https://civitai.com/api/v1/models/1027497",
+      "sourceModelName": "Anya Forger | SPY x FAMILY | スパイファミリー",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2542764",
+      "sha256": "557bff42a26cf106cc78661729f28d0f9d77769c1a4aaa9f30063e74a5090262",
+      "sizeBytes": 114446404,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 428168,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1462359-1682558",
+      "name": "Aris Tendou",
+      "franchise": "Blue Archive",
+      "filename": "aris-tendou-1682558.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "aris-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1462359,
+      "modelVersionId": 1682558,
+      "fileId": 1583653,
+      "sourceUrl": "https://civitai.red/models/1462359?modelVersionId=1682558",
+      "metadataUrl": "https://civitai.com/api/v1/models/1462359",
+      "sourceModelName": "IllustriousXL - Tendou Aris 天童 アリス - blue archive",
+      "versionName": "通常アリス･メイドアリスLora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1682558",
+      "sha256": "04f4e84e6670081d96203391fb290cb37644e223afa2b37616025238511c9af5",
+      "sizeBytes": 177181960,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 356056,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-946720-1059964",
+      "name": "Arisu Tachibana",
+      "franchise": "The iDOLM@STER Cinderella Girls",
+      "filename": "arisu-tachibana-1059964.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "tachibana arisu"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 946720,
+      "modelVersionId": 1059964,
+      "fileId": 965501,
+      "sourceUrl": "https://civitai.red/models/946720?modelVersionId=1059964",
+      "metadataUrl": "https://civitai.com/api/v1/models/946720",
+      "sourceModelName": "Tachibana Arisu | THE iDOLM@STER Cinderella Girls | アイドルマスターシンデレラガールズ",
+      "versionName": "v1.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/1059964",
+      "sha256": "a69393a7cc30d691b4cb0cd470dc0831402619f3bfa47202a7912ecaeea8240e",
+      "sizeBytes": 114443948,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 425712,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1047702-2542774",
+      "name": "Becky Blackbell",
+      "franchise": "SPY x FAMILY",
+      "filename": "becky-blackbell-2542774.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "becky blackbell"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1047702,
+      "modelVersionId": 2542774,
+      "fileId": 2430967,
+      "sourceUrl": "https://civitai.red/models/1047702?modelVersionId=2542774",
+      "metadataUrl": "https://civitai.com/api/v1/models/1047702",
+      "sourceModelName": "Becky Blackbell | SPY x FAMILY | スパイファミリー",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2542774",
+      "sha256": "f066cee734829f3c14fba57ed56d16fe8a9b2d33b9d62db2471bebea1af97571",
+      "sizeBytes": 114438844,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 420608,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1395245-1577115",
+      "name": "Bready",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "bready-1577115.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "brdy"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1395245,
+      "modelVersionId": 1577115,
+      "fileId": 1476851,
+      "sourceUrl": "https://civitai.red/models/1395245?modelVersionId=1577115",
+      "metadataUrl": "https://civitai.com/api/v1/models/1395245",
+      "sourceModelName": "Bready (NIKKE) SDXL LoRA [Illustrious]",
+      "versionName": "bready-nikke-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1577115",
+      "sha256": "814efd698a1fa8abf8794e1fdb7078421a29c2f707ed242fc47fc15ce6872145",
+      "sizeBytes": 57436188,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 426080,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1292157-1484428",
+      "name": "Bulma",
+      "franchise": "Dragon Ball",
+      "filename": "bulma-1484428.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "bulma"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1292157,
+      "modelVersionId": 1484428,
+      "fileId": 1384683,
+      "sourceUrl": "https://civitai.red/models/1292157?modelVersionId=1484428",
+      "metadataUrl": "https://civitai.com/api/v1/models/1292157",
+      "sourceModelName": "Bulma / ブルマ - Classic Dragon Ball (Pony)",
+      "versionName": "Illustrious v1.0",
+      "creator": "HellKaiza",
+      "downloadUrl": "https://civitai.com/api/download/models/1484428",
+      "sha256": "ed8d4326ab37751c86932958f2dc2d806576459e94b2362fc67db0232c99bedf",
+      "sizeBytes": 228479380,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 444888,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-866095-1239263",
+      "name": "Celia Claire",
+      "franchise": "Spirit Chronicles",
+      "filename": "celia-claire-1239263.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "celia-season2",
+        "celia claire"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 866095,
+      "modelVersionId": 1239263,
+      "fileId": 1144524,
+      "sourceUrl": "https://civitai.red/models/866095?modelVersionId=1239263",
+      "metadataUrl": "https://civitai.com/api/v1/models/866095",
+      "sourceModelName": "IllustriousXL - Celia Claire  セリア クレール - seirei gensouki",
+      "versionName": "2期 4衣装Lora v2.0",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1239263",
+      "sha256": "946a5f38e25cf0c9b06e7f56e58329dde0c09e94397e6864c285aef2e21661cd",
+      "sizeBytes": 177185448,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Rent",
+          "RentCivit",
+          "Image"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 359544,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2329750-2620727",
+      "name": "Chen Qianyu",
+      "franchise": "Arknights: Endfield",
+      "filename": "chen-qianyu-2620727.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Chen Qianyu"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2329750,
+      "modelVersionId": 2620727,
+      "fileId": 2508481,
+      "sourceUrl": "https://civitai.red/models/2329750?modelVersionId=2620727",
+      "metadataUrl": "https://civitai.com/api/v1/models/2329750",
+      "sourceModelName": "Chen Qianyu - Arknights: Endfield - Illustrious",
+      "versionName": "V1",
+      "creator": "Reijiboo",
+      "downloadUrl": "https://civitai.com/api/download/models/2620727",
+      "sha256": "be7f31b086691a49d051583a88408fce9314de4c474c50af3dfab5c0dfb0d667",
+      "sizeBytes": 228459324,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 424832,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-958026-1730584",
+      "name": "Chi-Chi",
+      "franchise": "Dragon Ball",
+      "filename": "chi-chi-1730584.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "chi-chi"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 958026,
+      "modelVersionId": 1730584,
+      "fileId": 1631219,
+      "sourceUrl": "https://civitai.red/models/958026?modelVersionId=1730584",
+      "metadataUrl": "https://civitai.com/api/v1/models/958026",
+      "sourceModelName": "Chi-Chi / チチ - Dragon Ball",
+      "versionName": "Illustrious v3.0",
+      "creator": "HellKaiza",
+      "downloadUrl": "https://civitai.com/api/download/models/1730584",
+      "sha256": "0e6a175b24ebacbd9f785e363392be4990e214c39a76f4d04eaf48a506d37277",
+      "sizeBytes": 228490988,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 456496,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1058718-1203970",
+      "name": "Chinatsu Kano",
+      "franchise": "Blue Box",
+      "filename": "chinatsu-kano-1203970.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "kano chinatsu"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1058718,
+      "modelVersionId": 1203970,
+      "fileId": 1109223,
+      "sourceUrl": "https://civitai.red/models/1058718?modelVersionId=1203970",
+      "metadataUrl": "https://civitai.com/api/v1/models/1058718",
+      "sourceModelName": "Kano Chinatsu | Blue Box | アオのハコ",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/1203970",
+      "sha256": "6d7f38937d3506c82220afac5f03cbb6a73ad8f765e1faed4189efed26ede7a5",
+      "sizeBytes": 114438244,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 420008,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1762845-1995009",
+      "name": "Chloe von Einzbern",
+      "franchise": "Fate/kaleid liner Prisma Illya",
+      "filename": "chloe-von-einzbern-1995009.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Chloe"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1762845,
+      "modelVersionId": 1995009,
+      "fileId": 1892174,
+      "sourceUrl": "https://civitai.red/models/1762845?modelVersionId=1995009",
+      "metadataUrl": "https://civitai.com/api/v1/models/1762845",
+      "sourceModelName": "Chloe Von Einzbern | Fate/Kalleid Liner Prisma Illya (4 outfits) [COMMISION]",
+      "versionName": "Kaleid",
+      "creator": "C2P",
+      "downloadUrl": "https://civitai.com/api/download/models/1995009",
+      "sha256": "99b82fbae73dbfe4ac520f3b8b86255b575923622538e780341b00f6df33233b",
+      "sizeBytes": 57461132,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 451024,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1019635-1143344",
+      "name": "Cinderella",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "cinderella-1143344.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "cindef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1019635,
+      "modelVersionId": 1143344,
+      "fileId": 1048378,
+      "sourceUrl": "https://civitai.red/models/1019635?modelVersionId=1143344",
+      "metadataUrl": "https://civitai.com/api/v1/models/1019635",
+      "sourceModelName": "Cinderella/Anachiro (NIKKE) SDXL LoRA [Illustrious] | 2 Outfits",
+      "versionName": "cinderella-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1143344",
+      "sha256": "113cf0b99bc17b043112ce020801791a094ea43354b43b1be79b43694351130e",
+      "sizeBytes": 57463452,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 453344,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1168049-1314089",
+      "name": "Crown",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "crown-1314089.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "crwndf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1168049,
+      "modelVersionId": 1314089,
+      "fileId": 1218170,
+      "sourceUrl": "https://civitai.red/models/1168049?modelVersionId=1314089",
+      "metadataUrl": "https://civitai.com/api/v1/models/1168049",
+      "sourceModelName": "Crown (NIKKE) SDXL LoRA [Illustrious] | 2 Outfits",
+      "versionName": "crown-nikke-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1314089",
+      "sha256": "009060d8475da717acaed89a1ebbae238e93c0814d5aaa5b8ba65d2b2c9432fa",
+      "sizeBytes": 57466948,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 456840,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2298875-2649912",
+      "name": "Cure Answer",
+      "franchise": "Meitantei Precure!",
+      "filename": "cure-answer-2649912.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "cureanswer"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2298875,
+      "modelVersionId": 2649912,
+      "fileId": 2537647,
+      "sourceUrl": "https://civitai.red/models/2298875?modelVersionId=2649912",
+      "metadataUrl": "https://civitai.com/api/v1/models/2298875",
+      "sourceModelName": "Cure Answer (Meitantei Precure!) / キュアアンサー (名探偵プリキュア！)",
+      "versionName": "for IL v1.0",
+      "creator": "oyorun0707",
+      "downloadUrl": "https://civitai.com/api/download/models/2649912",
+      "sha256": "ae2499b674a3fc52cf0a11297992b44b4454ca45d6490d6e328f7e0e727d61f1",
+      "sizeBytes": 228457988,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 423496,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2299086-2851375",
+      "name": "Cure Arcana Shadow",
+      "franchise": "Meitantei Precure!",
+      "filename": "cure-arcana-shadow-2851375.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "curearcanashadow"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2299086,
+      "modelVersionId": 2851375,
+      "fileId": 2737459,
+      "sourceUrl": "https://civitai.red/models/2299086?modelVersionId=2851375",
+      "metadataUrl": "https://civitai.com/api/v1/models/2299086",
+      "sourceModelName": "Cure Arcana Shadow (Meitantei Precure!) / キュアアルカナ・シャドウ (名探偵プリキュア！)",
+      "versionName": "for IL v1.1",
+      "creator": "oyorun0707",
+      "downloadUrl": "https://civitai.com/api/download/models/2851375",
+      "sha256": "40ef62d0e857f7f36d598ce92f115d5be8e93d75fbf389940b271fb230e88e2f",
+      "sizeBytes": 228457860,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 423368,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2299185-3166595",
+      "name": "Cure Eclair",
+      "franchise": "Meitantei Precure!",
+      "filename": "cure-eclair-3166595.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "cureeclair"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2299185,
+      "modelVersionId": 3166595,
+      "fileId": 3047006,
+      "sourceUrl": "https://civitai.red/models/2299185?modelVersionId=3166595",
+      "metadataUrl": "https://civitai.com/api/v1/models/2299185",
+      "sourceModelName": "Cure Eclair (Meitantei Precure!) / キュアエクレール (名探偵プリキュア！)",
+      "versionName": "for IL v1.0",
+      "creator": "oyorun0707",
+      "downloadUrl": "https://civitai.com/api/download/models/3166595",
+      "sha256": "322a45fcfbe97ca63ab12c6719e35bb1c7767b2aefad46ee09fb4aa926bb1304",
+      "sizeBytes": 228456588,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 422096,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1199170-2244609",
+      "name": "Cure Idol",
+      "franchise": "Kimi to Idol Precure",
+      "filename": "cure-idol-2244609.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "cureidol"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1199170,
+      "modelVersionId": 2244609,
+      "fileId": 2136964,
+      "sourceUrl": "https://civitai.red/models/1199170?modelVersionId=2244609",
+      "metadataUrl": "https://civitai.com/api/v1/models/1199170",
+      "sourceModelName": "Cure idol (Kimi to Idol Precure♪) / キュアアイドル (キミとアイドルプリキュア♪)",
+      "versionName": "for IL v2",
+      "creator": "oyorun0707",
+      "downloadUrl": "https://civitai.com/api/download/models/2244609",
+      "sha256": "81ff3a1ec51fb4a4c9b0ce274528866284f898668266bf0e9a9614d6d8ed0755",
+      "sizeBytes": 228452204,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 417712,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1216915-2244625",
+      "name": "Cure Wink",
+      "franchise": "Kimi to Idol Precure",
+      "filename": "cure-wink-2244625.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "curewink"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1216915,
+      "modelVersionId": 2244625,
+      "fileId": 2136989,
+      "sourceUrl": "https://civitai.red/models/1216915?modelVersionId=2244625",
+      "metadataUrl": "https://civitai.com/api/v1/models/1216915",
+      "sourceModelName": "Cure wink (Kimi to Idol Precure♪) / キュアウインク (キミとアイドルプリキュア♪)",
+      "versionName": "for IL v2",
+      "creator": "oyorun0707",
+      "downloadUrl": "https://civitai.com/api/download/models/2244625",
+      "sha256": "5d553bd30f3637c0607251d9b63b966544c6ffe9b758be8d47167caed0998e08",
+      "sizeBytes": 228451700,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 417208,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1467265-1659482",
+      "name": "Dorothy",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "dorothy-1659482.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "drthdf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1467265,
+      "modelVersionId": 1659482,
+      "fileId": 1560515,
+      "sourceUrl": "https://civitai.red/models/1467265?modelVersionId=1659482",
+      "metadataUrl": "https://civitai.com/api/v1/models/1467265",
+      "sourceModelName": "Dorothy (NIKKE) SDXL LoRA [Illustrious] | 4 Outfits",
+      "versionName": "dorothy-nikke-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1659482",
+      "sha256": "576d7625debb96a27ea5af0c85238540369019fd900b7576ba258c7a7856a383",
+      "sizeBytes": 57488388,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 478280,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1327407-2439947",
+      "name": "Ema Aizawa",
+      "franchise": "VSPO!",
+      "filename": "ema-aizawa-2439947.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "EmaDefault"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1327407,
+      "modelVersionId": 2439947,
+      "fileId": 2330738,
+      "sourceUrl": "https://civitai.red/models/1327407?modelVersionId=2439947",
+      "metadataUrl": "https://civitai.com/api/v1/models/1327407",
+      "sourceModelName": "藍沢エマ Aizawa Ema 2.0 [23 Outfits] / ぶいすぽっ！ Vspo! [Illustrious]",
+      "versionName": "IL V2.0 [23 Outfits]",
+      "creator": "andraste",
+      "downloadUrl": "https://civitai.com/api/download/models/2439947",
+      "sha256": "7209ffa112e550c8c86f6eb4e48a0b37ac01d54a6192ef4fe4eaa8dc183e062e",
+      "sizeBytes": 228493396,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 458904,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1431314-1642054",
+      "name": "Emma Frost",
+      "franchise": "Marvel Rivals",
+      "filename": "emma-frost-1642054.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "tsinne"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1431314,
+      "modelVersionId": 1642054,
+      "fileId": 1542475,
+      "sourceUrl": "https://civitai.red/models/1431314?modelVersionId=1642054",
+      "metadataUrl": "https://civitai.com/api/v1/models/1431314",
+      "sourceModelName": "Emma Frost (Marvel Rivals) [Illustrious] Character Lora",
+      "versionName": "v1.1",
+      "creator": "guy90",
+      "downloadUrl": "https://civitai.com/api/download/models/1642054",
+      "sha256": "d6e439c9b4150c7f9f25bcbbd5e3cfdc8a3f5b3ad8c9f409603dfa8ba146e60e",
+      "sizeBytes": 57441676,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 431568,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1179892-1327752",
+      "name": "Evelyn Chevalier",
+      "franchise": "Zenless Zone Zero",
+      "filename": "evelyn-chevalier-1327752.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "zenless_zone_zero_evelyn",
+        "znlessznzrvlyn"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1179892,
+      "modelVersionId": 1327752,
+      "fileId": 1231648,
+      "sourceUrl": "https://civitai.red/models/1179892?modelVersionId=1327752",
+      "metadataUrl": "https://civitai.com/api/v1/models/1179892",
+      "sourceModelName": "Evelyn Chevalier - Zenless Zone Zero",
+      "versionName": "v1.0",
+      "creator": "news_v_com",
+      "downloadUrl": "https://civitai.com/api/download/models/1327752",
+      "sha256": "5115123d4dc7abaf0ce22eda18c83c24402eca754f948070144cde5226ed145f",
+      "sizeBytes": 228455996,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 421504,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1140194-2135711",
+      "name": "Evernight / March 7th",
+      "franchise": "Honkai: Star Rail",
+      "filename": "evernight-march-7th-2135711.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Evernight",
+        "Evernightdef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1140194,
+      "modelVersionId": 2135711,
+      "fileId": 2029528,
+      "sourceUrl": "https://civitai.red/models/1140194?modelVersionId=2135711",
+      "metadataUrl": "https://civitai.com/api/v1/models/1140194",
+      "sourceModelName": "March 7th / Evernight | Honkai: Star Rail (2 forms / 4 outfits)",
+      "versionName": "Evernight",
+      "creator": "C2P",
+      "downloadUrl": "https://civitai.com/api/download/models/2135711",
+      "sha256": "a50f16b48b6098b7d4592330bc3320e9db0ab633faf3e3b3a47289da46b5940b",
+      "sizeBytes": 57439460,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 429352,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1049397-2542784",
+      "name": "Fiona Frost",
+      "franchise": "SPY x FAMILY",
+      "filename": "fiona-frost-2542784.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "fiona frost"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1049397,
+      "modelVersionId": 2542784,
+      "fileId": 2430975,
+      "sourceUrl": "https://civitai.red/models/1049397?modelVersionId=2542784",
+      "metadataUrl": "https://civitai.com/api/v1/models/1049397",
+      "sourceModelName": "Fiona Frost | SPY x FAMILY | スパイファミリー",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2542784",
+      "sha256": "1453389e8d033b1def256875e517e4a76fd5ef6ae122607999a6e272e78343df",
+      "sizeBytes": 114436924,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 418688,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1148092-1291255",
+      "name": "Firefly",
+      "franchise": "Honkai: Star Rail",
+      "filename": "firefly-1291255.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Fireflydef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1148092,
+      "modelVersionId": 1291255,
+      "fileId": 1195761,
+      "sourceUrl": "https://civitai.red/models/1148092?modelVersionId=1291255",
+      "metadataUrl": "https://civitai.com/api/v1/models/1148092",
+      "sourceModelName": "Firefly | Honkai: Star Rail (4 outfits)",
+      "versionName": "v1.0",
+      "creator": "C2P",
+      "downloadUrl": "https://civitai.com/api/download/models/1291255",
+      "sha256": "c66256e248960223d6a0c8fca4185f469bebe31983c12c72c4852db2784eaa90",
+      "sizeBytes": 57452252,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 442144,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1127364-3154896",
+      "name": "Flandre Scarlet",
+      "franchise": "Touhou Project",
+      "filename": "flandre-scarlet-3154896.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "flandre scarlet"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1127364,
+      "modelVersionId": 3154896,
+      "fileId": 3035687,
+      "sourceUrl": "https://civitai.red/models/1127364?modelVersionId=3154896",
+      "metadataUrl": "https://civitai.com/api/v1/models/1127364",
+      "sourceModelName": "Flandre Scarlet (Touhou Project) - フランドール・スカーレット (東方)",
+      "versionName": "Illustrious V4",
+      "creator": "RDMPrompt",
+      "downloadUrl": "https://civitai.com/api/download/models/3154896",
+      "sha256": "946c7d39363c1dcec6104a412c92cc3611ee405fe8f00ecfbf9aa4b0bee9a39f",
+      "sizeBytes": 228450268,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 415776,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-468686-1190237",
+      "name": "Gardevoir",
+      "franchise": "Pokemon",
+      "filename": "gardevoir-1190237.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Gardevoir"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 468686,
+      "modelVersionId": 1190237,
+      "fileId": 1095439,
+      "sourceUrl": "https://civitai.red/models/468686?modelVersionId=1190237",
+      "metadataUrl": "https://civitai.com/api/v1/models/468686",
+      "sourceModelName": "Gardevoir (Pokemon) [illustrious & PONY]",
+      "versionName": "v2 Illustrious",
+      "creator": "Midnightcrawler",
+      "downloadUrl": "https://civitai.com/api/download/models/1190237",
+      "sha256": "e88d165fb78d97de839b0bb5f2c2f921125be94a9c85252ff3df87f82adc74f5",
+      "sizeBytes": 228498148,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 463656,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1052666-1181189",
+      "name": "Gwen Tennyson",
+      "franchise": "Ben 10",
+      "filename": "gwen-tennyson-1181189.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Gwen_Tennyson"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1052666,
+      "modelVersionId": 1181189,
+      "fileId": 1089686,
+      "sourceUrl": "https://civitai.red/models/1052666?modelVersionId=1181189",
+      "metadataUrl": "https://civitai.com/api/v1/models/1052666",
+      "sourceModelName": "Gwen Tennyson [ Ben 10 : Classic ] by Leaf",
+      "versionName": "v1.0 : illustrious",
+      "creator": "The_LeafMakerGod",
+      "downloadUrl": "https://civitai.com/api/download/models/1181189",
+      "sha256": "3b3ca4d3e449663b1ada54d226a011442b27f9548df66b737070187c48306340",
+      "sizeBytes": 228459484,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 424992,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-917380-1061435",
+      "name": "Hana Uzaki",
+      "franchise": "Uzaki-chan Wants to Hang Out!",
+      "filename": "hana-uzaki-1061435.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "uzaki hana"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 917380,
+      "modelVersionId": 1061435,
+      "fileId": 966895,
+      "sourceUrl": "https://civitai.red/models/917380?modelVersionId=1061435",
+      "metadataUrl": "https://civitai.com/api/v1/models/917380",
+      "sourceModelName": "[Uzaki-chan Wants to Hang Out!] Hana Uzaki | [宇崎ちゃんは遊びたい！] 宇崎花",
+      "versionName": "Illustrious V0.1 1st",
+      "creator": "dpsjksjx614",
+      "downloadUrl": "https://civitai.com/api/download/models/1061435",
+      "sha256": "402d3b45f7b9c7ba68e05ccc964c4f2be7fa67b9d569924f3dbf86a7554e7d87",
+      "sizeBytes": 228472636,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 438144,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-405278-1213588",
+      "name": "Hayase Nagatoro",
+      "franchise": "Don't Toy With Me, Miss Nagatoro",
+      "filename": "hayase-nagatoro-1213588.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "nagatoro hayase"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 405278,
+      "modelVersionId": 1213588,
+      "fileId": 1118970,
+      "sourceUrl": "https://civitai.red/models/405278?modelVersionId=1213588",
+      "metadataUrl": "https://civitai.com/api/v1/models/405278",
+      "sourceModelName": "Hayase Nagatoro - [10+ Outfits] - Don't Toy With Me, Miss Nagatoro",
+      "versionName": "[ILL] Epoch-10",
+      "creator": "nrocka",
+      "downloadUrl": "https://civitai.com/api/download/models/1213588",
+      "sha256": "b4089e4bcc5491aa34f327a413144d5993a8fd2f538f67edd4d73aa0da8d86ab",
+      "sizeBytes": 228480308,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 445816,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1200810-1352133",
+      "name": "Helen Parr / Elastigirl",
+      "franchise": "The Incredibles",
+      "filename": "helen-parr-elastigirl-1352133.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "helenp",
+        "helen parr",
+        "elastigirl"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1200810,
+      "modelVersionId": 1352133,
+      "fileId": 1255428,
+      "sourceUrl": "https://civitai.red/models/1200810?modelVersionId=1352133",
+      "metadataUrl": "https://civitai.com/api/v1/models/1200810",
+      "sourceModelName": "Helen Parr/Elastigirl (The Incredibles) [Illustrious]",
+      "versionName": "v1.0",
+      "creator": "Ty_Lee",
+      "downloadUrl": "https://civitai.com/api/download/models/1352133",
+      "sha256": "91f30878354c13631bcea17ffcf2fbbd095ea37e5d8588d472010372dcb3d618",
+      "sizeBytes": 57433652,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 423544,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1215490-1369180",
+      "name": "Helm",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "helm-1369180.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "hlmdf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1215490,
+      "modelVersionId": 1369180,
+      "fileId": 1272139,
+      "sourceUrl": "https://civitai.red/models/1215490?modelVersionId=1369180",
+      "metadataUrl": "https://civitai.com/api/v1/models/1215490",
+      "sourceModelName": "Helm (NIKKE) SDXL LoRA [Illustrious] | 3 Outfits",
+      "versionName": "helm-nikke-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1369180",
+      "sha256": "8780296edd4f257bdb6b0eefe69ba29a0c0a62c7f2b2b4319d950e8658fd8e21",
+      "sizeBytes": 57498476,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 488368,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1282238-2472457",
+      "name": "Hermione Granger",
+      "franchise": "Harry Potter",
+      "filename": "hermione-granger-2472457.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "hermione_hp"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1282238,
+      "modelVersionId": 2472457,
+      "fileId": 2361067,
+      "sourceUrl": "https://civitai.red/models/1282238?modelVersionId=2472457",
+      "metadataUrl": "https://civitai.com/api/v1/models/1282238",
+      "sourceModelName": "Hermione Granger ( Harry Potter series )",
+      "versionName": "Illustrious V2",
+      "creator": "plumbu82286",
+      "downloadUrl": "https://civitai.com/api/download/models/2472457",
+      "sha256": "0c2bbc5c7cdacb998123a1fcfebcf8394b41d12f6251923e46ff6e45af6bbcfb",
+      "sizeBytes": 228456660,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Sell",
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 422168,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-912054-1020687",
+      "name": "Hikari Tachibana",
+      "franchise": "Blue Archive",
+      "filename": "hikari-tachibana-1020687.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "hikari-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 912054,
+      "modelVersionId": 1020687,
+      "fileId": 926321,
+      "sourceUrl": "https://civitai.red/models/912054?modelVersionId=1020687",
+      "metadataUrl": "https://civitai.com/api/v1/models/912054",
+      "sourceModelName": "IllustriousXL - Tachibana Hikari 橘 ヒカリ - blue archive",
+      "versionName": "v1.0",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1020687",
+      "sha256": "10316e9bf60a14600edb05b4f5e782c0b78f698ed523d637df93edb4e1d88297",
+      "sizeBytes": 177179864,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 353960,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1580254-1789316",
+      "name": "Hinano Tachibana",
+      "franchise": "VSPO!",
+      "filename": "hinano-tachibana-1789316.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "HinanoDefault"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1580254,
+      "modelVersionId": 1789316,
+      "fileId": 1689958,
+      "sourceUrl": "https://civitai.red/models/1580254?modelVersionId=1789316",
+      "metadataUrl": "https://civitai.com/api/v1/models/1580254",
+      "sourceModelName": "橘ひなの Tachibana Hinano / ぶいすぽっ！ Vspo! [Illustrious][16 Outfits]",
+      "versionName": "v1.0",
+      "creator": "andraste",
+      "downloadUrl": "https://civitai.com/api/download/models/1789316",
+      "sha256": "0bb3d61e1ceffe4251ab6e4445adce18742ee867e44f94cb4bc1b49fef2dc08d",
+      "sizeBytes": 228484492,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 450000,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-91861-1244155",
+      "name": "Hinata Hyuga",
+      "franchise": "Naruto Shippuden",
+      "filename": "hinata-hyuga-1244155.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ChopioHinata"
+      ],
+      "strength": 0.85,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 91861,
+      "modelVersionId": 1244155,
+      "fileId": 1149471,
+      "sourceUrl": "https://civitai.red/models/91861?modelVersionId=1244155",
+      "metadataUrl": "https://civitai.com/api/v1/models/91861",
+      "sourceModelName": "Naruto Shippuden - Hinata Hyuga [SD1.5 + Pony + Illustrious]",
+      "versionName": "v1.0 [Illustrious]",
+      "creator": "turkey910",
+      "downloadUrl": "https://civitai.com/api/download/models/1244155",
+      "sha256": "cc6a209d23afa4209694d7966e3917406e90e972934c4e712a918e20a5592961",
+      "sizeBytes": 85427260,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 310928,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1015186-1138174",
+      "name": "Hiro Shinosawa",
+      "franchise": "Gakuen iDOLM@STER",
+      "filename": "hiro-shinosawa-1138174.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "hiro-default",
+        "shinosawa hiro"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1015186,
+      "modelVersionId": 1138174,
+      "fileId": 1043113,
+      "sourceUrl": "https://civitai.red/models/1015186?modelVersionId=1138174",
+      "metadataUrl": "https://civitai.com/api/v1/models/1015186",
+      "sourceModelName": "IllustriousXL - Shinosawa Hiro 篠澤 広 - gakuen idolmaster",
+      "versionName": "通常衣装 v1.0",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1138174",
+      "sha256": "defe581b872d63c725d813a98a1ce26b4b469fa831a02a6732fd46f3b3b1293a",
+      "sizeBytes": 177180008,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 354104,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1058938-1188303",
+      "name": "Ibuki Tanga",
+      "franchise": "Blue Archive",
+      "filename": "ibuki-tanga-1188303.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ibuki-jacket"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1058938,
+      "modelVersionId": 1188303,
+      "fileId": 1093494,
+      "sourceUrl": "https://civitai.red/models/1058938?modelVersionId=1188303",
+      "metadataUrl": "https://civitai.com/api/v1/models/1058938",
+      "sourceModelName": "IllustriousXL - Tanga Ibuki  丹花 イブキ - blue archive",
+      "versionName": "通常衣装Lora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1188303",
+      "sha256": "fa8c40c2d16deb5ef1d5f4e500c76728f690e82ec564d16c6e7a4b3c6ccd3afe",
+      "sizeBytes": 177186104,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 360200,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1707826-1932645",
+      "name": "Illyasviel von Einzbern",
+      "franchise": "Fate/kaleid liner Prisma Illya",
+      "filename": "illyasviel-von-einzbern-1932645.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Illya"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1707826,
+      "modelVersionId": 1932645,
+      "fileId": 1830505,
+      "sourceUrl": "https://civitai.red/models/1707826?modelVersionId=1932645",
+      "metadataUrl": "https://civitai.com/api/v1/models/1707826",
+      "sourceModelName": "Illyasviel Von Einzbern | Fate/Kalleid Liner Prisma Illya (3 outfits) [COMMISION]",
+      "versionName": "v1.0",
+      "creator": "C2P",
+      "downloadUrl": "https://civitai.com/api/download/models/1932645",
+      "sha256": "e3c6ac8607c448c0bc338653487d510b66b04f2d676ba507748882a0dc1a871b",
+      "sizeBytes": 57452460,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 442352,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1128520-1536845",
+      "name": "Inori Yuitsuka",
+      "franchise": "Medalist",
+      "filename": "inori-yuitsuka-1536845.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "inori-default",
+        "yuitsuka inori"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1128520,
+      "modelVersionId": 1536845,
+      "fileId": 1436801,
+      "sourceUrl": "https://civitai.red/models/1128520?modelVersionId=1536845",
+      "metadataUrl": "https://civitai.com/api/v1/models/1128520",
+      "sourceModelName": "IllustriousXL - Yuitsuka Inori  結束 いのり - medalist",
+      "versionName": "通常衣装 4衣装入り v1.0",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1536845",
+      "sha256": "137ac78e0779bf9861d98e1c5e90f2f1d5749c134cf08656434a28e0521daf00",
+      "sizeBytes": 177179592,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 353688,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1042202-2810857",
+      "name": "Kana Arima",
+      "franchise": "Oshi no Ko",
+      "filename": "kana-arima-2810857.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "arima kana"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1042202,
+      "modelVersionId": 2810857,
+      "fileId": 2696656,
+      "sourceUrl": "https://civitai.red/models/1042202?modelVersionId=2810857",
+      "metadataUrl": "https://civitai.com/api/v1/models/1042202",
+      "sourceModelName": "Arima Kana | Oshi no Ko | 推しの子",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2810857",
+      "sha256": "cd13ac90c8e1aaca6cec993e78b70600a24288b26b25c97ebfdc1e0154dd6ad4",
+      "sizeBytes": 114443900,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 425664,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2004809-2269501",
+      "name": "Kaoru Kamiya",
+      "franchise": "Rurouni Kenshin",
+      "filename": "kaoru-kamiya-2269501.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Kamiya Kaoru"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2004809,
+      "modelVersionId": 2269501,
+      "fileId": 2161616,
+      "sourceUrl": "https://civitai.red/models/2004809?modelVersionId=2269501",
+      "metadataUrl": "https://civitai.com/api/v1/models/2004809",
+      "sourceModelName": "Rurouni Kenshin 2023 models [Illustrious]",
+      "versionName": "Kamiya Kaoru",
+      "creator": "AnimeGuy01",
+      "downloadUrl": "https://civitai.com/api/download/models/2269501",
+      "sha256": "71b3bdd40306171d4fbf24809b0000ea94812d322be158feaf19ecabc19e2a02",
+      "sizeBytes": 228459700,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 425208,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1060298-1189874",
+      "name": "Keqing",
+      "franchise": "Genshin Impact",
+      "filename": "keqing-1189874.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "kqngdf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1060298,
+      "modelVersionId": 1189874,
+      "fileId": 1095058,
+      "sourceUrl": "https://civitai.red/models/1060298?modelVersionId=1189874",
+      "metadataUrl": "https://civitai.com/api/v1/models/1060298",
+      "sourceModelName": "Keqing (Genshin Impact) SDXL LoRA [Illustrious] | 3 Outfits",
+      "versionName": "keqing-gi-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1189874",
+      "sha256": "624eda5135cff862ad140b9a4ecbb23d9c4f3a11f25480ee9f6650b8dae8ec34",
+      "sizeBytes": 57491068,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 480960,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "kim-possible-legacy",
+      "name": "Kim Possible",
+      "franchise": "Kim Possible",
+      "filename": "KimPossibleIllustrious2.0JLFO.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "kimp"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "sourceUrl": "https://www.dropbox.com/scl/fi/kosfszac2jmlq1sa25pgv/KimPossibleIllustrious2.0JLFO.safetensors?rlkey=h7s3ndipjhm9eu78fyxprtzqr&dl=1",
+      "sourceModelName": "KimPossibleIllustrious2.0JLFO",
+      "versionName": "Existing endpoint model",
+      "creator": "Unknown (retained from existing Dockerfile)",
+      "downloadUrl": "https://www.dropbox.com/scl/fi/kosfszac2jmlq1sa25pgv/KimPossibleIllustrious2.0JLFO.safetensors?rlkey=h7s3ndipjhm9eu78fyxprtzqr&dl=1",
+      "sha256": "642f2ec5f68fa9451fb4359aaf8546ee6c27aba7dfdd8c8107a3854de9f5be91",
+      "sizeBytes": 228456516,
+      "license": {
+        "status": "unknown",
+        "note": "User-provided legacy model retained from the existing endpoint; creator permissions were not supplied."
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:38:00.149231Z",
+        "method": "Unauthenticated full download, exact byte count, SHA256 and Safetensors header verification",
+        "httpStatus": 200,
+        "contentType": "application/binary",
+        "sha256Source": "Computed from full downloaded file",
+        "triggerWordsSource": "Safetensors ss_tag_frequency metadata (142 training images use kimp)"
+      }
+    },
+    {
+      "id": "civitai-1065259-1195575",
+      "name": "Kisaki Ryuuge",
+      "franchise": "Blue Archive",
+      "filename": "kisaki-ryuuge-1195575.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "kisaki-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1065259,
+      "modelVersionId": 1195575,
+      "fileId": 1100862,
+      "sourceUrl": "https://civitai.red/models/1065259?modelVersionId=1195575",
+      "metadataUrl": "https://civitai.com/api/v1/models/1065259",
+      "sourceModelName": "IllustriousXL - Ryuuge Kisaki 竜華 キサキ - blue archive",
+      "versionName": "3衣装Lora v1.0",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1195575",
+      "sha256": "248d5c8843a83421571833a82416282d5ea79c8a50ba8d43ccaa347207ad241c",
+      "sizeBytes": 177191560,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 365656,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1487403-1682497",
+      "name": "Koharu Shimoe",
+      "franchise": "Blue Archive",
+      "filename": "koharu-shimoe-1682497.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "koharu-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1487403,
+      "modelVersionId": 1682497,
+      "fileId": 1583588,
+      "sourceUrl": "https://civitai.red/models/1487403?modelVersionId=1682497",
+      "metadataUrl": "https://civitai.com/api/v1/models/1487403",
+      "sourceModelName": "IllustriousXL - Shimoe Koharu  下江 コハル - blue archive",
+      "versionName": "通常コハル･体操着･スク水Lora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1682497",
+      "sha256": "69e3e6e67fea57bcee684f568e72257a11104d9808cc47391cb26105dfea4ccb",
+      "sizeBytes": 177180488,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 354584,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1058083-1187325",
+      "name": "Kotone Fujita",
+      "franchise": "Gakuen iDOLM@STER",
+      "filename": "kotone-fujita-1187325.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "kotone-default",
+        "fujita kotone"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1058083,
+      "modelVersionId": 1187325,
+      "fileId": 1092510,
+      "sourceUrl": "https://civitai.red/models/1058083?modelVersionId=1187325",
+      "metadataUrl": "https://civitai.com/api/v1/models/1058083",
+      "sourceModelName": "IllustriousXL - Fujita Kotone 藤田 ことね - gakuen idolmaster",
+      "versionName": "通常衣装Lora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1187325",
+      "sha256": "8a9bddfb0ea7996723922994dcd5723090f608b8892e20d4f8d9140b97004fa1",
+      "sizeBytes": 177182104,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 356200,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1464135-2871476",
+      "name": "Kyouka",
+      "franchise": "Princess Connect! Re:Dive",
+      "filename": "kyouka-2871476.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "pcrkyoka"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1464135,
+      "modelVersionId": 2871476,
+      "fileId": 2753676,
+      "sourceUrl": "https://civitai.red/models/1464135?modelVersionId=2871476",
+      "metadataUrl": "https://civitai.com/api/v1/models/1464135",
+      "sourceModelName": "[IL v0.1 + Anima] Kyouka - Princess Connect | キョウカ プリンセスコネクト!Re:Dive (6+1 costumes)",
+      "versionName": "v1.5 (IL)",
+      "creator": "Elesico",
+      "downloadUrl": "https://civitai.com/api/download/models/2871476",
+      "sha256": "f971a1b8b13791169205c3c13146853b045443393b9304b5e51067c007338e21",
+      "sizeBytes": 28975940,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Sell",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 469896,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-621508-2047811",
+      "name": "Link",
+      "franchise": "The Legend of Zelda",
+      "filename": "link-2047811.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "link"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 621508,
+      "modelVersionId": 2047811,
+      "fileId": 1944735,
+      "sourceUrl": "https://civitai.red/models/621508?modelVersionId=2047811",
+      "metadataUrl": "https://civitai.com/api/v1/models/621508",
+      "sourceModelName": "Link LoRA | The Legend of Zelda",
+      "versionName": "IllustriousV3",
+      "creator": "Legendaer",
+      "downloadUrl": "https://civitai.com/api/download/models/2047811",
+      "sha256": "fd9ca43d99451fe433c77b4ba5516656d02cd413232c6612ac119658dfd7367a",
+      "sizeBytes": 229252928,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent",
+          "Image"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 387168,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1036986-1163164",
+      "name": "Mahiro Oyama",
+      "franchise": "ONIMAI",
+      "filename": "mahiro-oyama-1163164.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "mahiro-roomwear",
+        "oyama mahiro"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1036986,
+      "modelVersionId": 1163164,
+      "fileId": 1068319,
+      "sourceUrl": "https://civitai.red/models/1036986?modelVersionId=1163164",
+      "metadataUrl": "https://civitai.com/api/v1/models/1036986",
+      "sourceModelName": "IllustriousXL - Oyama Mahiro  緒山 まひろ - onii-chan wa oshimai!",
+      "versionName": "通常まひろLora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1163164",
+      "sha256": "54f90e4cec23eb7deb26146fc4bd7a517853c2c998bdf37d4566a5d3905e16eb",
+      "sizeBytes": 177189904,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 364000,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1019633-1143339",
+      "name": "Maiden",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "maiden-1143339.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "mdndef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1019633,
+      "modelVersionId": 1143339,
+      "fileId": 1048376,
+      "sourceUrl": "https://civitai.red/models/1019633?modelVersionId=1143339",
+      "metadataUrl": "https://civitai.com/api/v1/models/1019633",
+      "sourceModelName": "Maiden (NIKKE) SDXL LoRA [Illustrious] | 4 Outfits",
+      "versionName": "maiden-nikke-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1143339",
+      "sha256": "af5a9cf779bcd885423fcd506c424f09745f436edc58065246173b5e82029f21",
+      "sizeBytes": 57471820,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 461712,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1065535-1195902",
+      "name": "Marciana",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "marciana-1195902.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "marcianadef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1065535,
+      "modelVersionId": 1195902,
+      "fileId": 1101192,
+      "sourceUrl": "https://civitai.red/models/1065535?modelVersionId=1195902",
+      "metadataUrl": "https://civitai.com/api/v1/models/1065535",
+      "sourceModelName": "Marciana (NIKKE) SDXL LoRA [Illustrious] | 2 Outfits",
+      "versionName": "marciana-nikke-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1195902",
+      "sha256": "8dfb67ec9749ad8eccb008873db1a3a304ddf258e19906ff6726d2a914bd0dd4",
+      "sizeBytes": 57461468,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent",
+          "Image"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 451360,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-779892-2301375",
+      "name": "Marie Rose",
+      "franchise": "Dead or Alive",
+      "filename": "marie-rose-2301375.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "marie rose"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 779892,
+      "modelVersionId": 2301375,
+      "fileId": 2192352,
+      "sourceUrl": "https://civitai.red/models/779892?modelVersionId=2301375",
+      "metadataUrl": "https://civitai.com/api/v1/models/779892",
+      "sourceModelName": "Marie Rose - Dead or Alive series",
+      "versionName": "Illustrious - v1.0",
+      "creator": "Primarch",
+      "downloadUrl": "https://civitai.com/api/download/models/2301375",
+      "sha256": "98784386f6fe034c4dd30fc3a3189baeece9b5bfaf92e3992b815779206b2e97",
+      "sizeBytes": 228462892,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 428400,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-684770-3128825",
+      "name": "Marinette Dupain-Cheng / Ladybug",
+      "franchise": "Miraculous",
+      "filename": "marinette-dupain-cheng-ladybug-3128825.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [],
+      "strength": 0.65,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 684770,
+      "modelVersionId": 3128825,
+      "fileId": 3009355,
+      "sourceUrl": "https://civitai.red/models/684770?modelVersionId=3128825",
+      "metadataUrl": "https://civitai.com/api/v1/models/684770",
+      "sourceModelName": "Marinette Dupain-Cheng, Ladybug, Miraculous. Different models and attires.",
+      "versionName": "🔴 Civilian S6 (IL)",
+      "creator": "Tetete80099",
+      "downloadUrl": "https://civitai.com/api/download/models/3128825",
+      "sha256": "eadc6c751160ceb488d60acb3c239e0ae5c6f57b1d7d25bd36adcb3928c3031f",
+      "sizeBytes": 228459508,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 425016,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2629210-3224110",
+      "name": "Mellow",
+      "franchise": "Wrap Knights",
+      "filename": "mellow-3224110.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "AF_WrapKinghts_Mellow"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2629210,
+      "modelVersionId": 3224110,
+      "fileId": 3106185,
+      "sourceUrl": "https://civitai.red/models/2629210?modelVersionId=3224110",
+      "metadataUrl": "https://civitai.com/api/v1/models/2629210",
+      "sourceModelName": "镭明闪击 Wrap Kinghts Collection - Illustrious",
+      "versionName": "Mellow",
+      "creator": "affa1988",
+      "downloadUrl": "https://civitai.com/api/download/models/3224110",
+      "sha256": "408c27cfaac7baee07dbeb82126acd61fa5553748e328fbd53407e152abd0438",
+      "sizeBytes": 170541412,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 310200,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-442186-1210143",
+      "name": "Mikasa Ackerman",
+      "franchise": "Attack on Titan",
+      "filename": "mikasa-ackerman-1210143.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "mikasa_ackerman"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 442186,
+      "modelVersionId": 1210143,
+      "fileId": 1115695,
+      "sourceUrl": "https://civitai.red/models/442186?modelVersionId=1210143",
+      "metadataUrl": "https://civitai.com/api/v1/models/442186",
+      "sourceModelName": "Mikasa Ackerman | Shingeki no Kyojin / Attack on Titan",
+      "versionName": "ilxl-v0.1",
+      "creator": "andinmaro146",
+      "downloadUrl": "https://civitai.com/api/download/models/1210143",
+      "sha256": "b5afc6e08f138b938926d10ffeda2dd018a61f7d8cf3323c38e4fdaedc277899",
+      "sizeBytes": 228488324,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "Rent",
+          "RentCivit"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 453832,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1704570-1929015",
+      "name": "Mira",
+      "franchise": "K-Pop Demon Hunters",
+      "filename": "mira-1929015.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "M1r4KP0P"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1704570,
+      "modelVersionId": 1929015,
+      "fileId": 1828542,
+      "sourceUrl": "https://civitai.red/models/1704570?modelVersionId=1929015",
+      "metadataUrl": "https://civitai.com/api/v1/models/1704570",
+      "sourceModelName": "Mira (K-Pop Demon Hunters) LoRa Illustrious",
+      "versionName": "V1",
+      "creator": "kedicpeep",
+      "downloadUrl": "https://civitai.com/api/download/models/1929015",
+      "sha256": "589a369090ae967dc218a0769582541d72fc3f2d07a63e8b8946c7806775d0cd",
+      "sizeBytes": 228459708,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 425216,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1631650-2514139",
+      "name": "Misora",
+      "franchise": "Princess Connect! Re:Dive",
+      "filename": "misora-2514139.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "pcrmsra",
+        "pmsradef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1631650,
+      "modelVersionId": 2514139,
+      "fileId": 2401983,
+      "sourceUrl": "https://civitai.red/models/1631650?modelVersionId=2514139",
+      "metadataUrl": "https://civitai.com/api/v1/models/1631650",
+      "sourceModelName": "[IL v0.1 + Anima] Misora - Princess Connect | ミソラ プリンセスコネクト!Re:Dive (3+1 costumes) [Request]",
+      "versionName": "v1.1 (IL)",
+      "creator": "Elesico",
+      "downloadUrl": "https://civitai.com/api/download/models/2514139",
+      "sha256": "3ab440f3cac22ff7d275fb663c117f3a717253aa41e200f5ae96d762dd5226a1",
+      "sizeBytes": 28948300,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Sell",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 442256,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1060071-1237445",
+      "name": "Mita",
+      "franchise": "MiSide",
+      "filename": "mita-1237445.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Mita"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1060071,
+      "modelVersionId": 1237445,
+      "fileId": 1142666,
+      "sourceUrl": "https://civitai.red/models/1060071?modelVersionId=1237445",
+      "metadataUrl": "https://civitai.com/api/v1/models/1060071",
+      "sourceModelName": "Mita - MiSide",
+      "versionName": "ILL - Model Pack v2",
+      "creator": "xbamaris",
+      "downloadUrl": "https://civitai.com/api/download/models/1237445",
+      "sha256": "5d63dab1ac5c43fafb2fb879b27d183b532887d028c792b66ca91b21cfe4d919",
+      "sizeBytes": 25651084,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 356656,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-91840-1261939",
+      "name": "Mitsuri Kanroji",
+      "franchise": "Demon Slayer",
+      "filename": "mitsuri-kanroji-1261939.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ChopioM1tsuri"
+      ],
+      "strength": 0.7,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 91840,
+      "modelVersionId": 1261939,
+      "fileId": 1167031,
+      "sourceUrl": "https://civitai.red/models/91840?modelVersionId=1261939",
+      "metadataUrl": "https://civitai.com/api/v1/models/91840",
+      "sourceModelName": "Demon Slayer | Kimetsu no Yaiba - Mitsuri Kanroji [1.5 + Pony + Illustrious]",
+      "versionName": "v1.0 [Illustrious]",
+      "creator": "turkey910",
+      "downloadUrl": "https://civitai.com/api/download/models/1261939",
+      "sha256": "f0ab1bd32f61aff653cc08645e9bde04f7c0ccc27519db26d6263e5f7303e8d5",
+      "sizeBytes": 85426636,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 310304,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1759947-1991781",
+      "name": "Miyu Edelfelt",
+      "franchise": "Fate/kaleid liner Prisma Illya",
+      "filename": "miyu-edelfelt-1991781.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Miyu"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1759947,
+      "modelVersionId": 1991781,
+      "fileId": 1888920,
+      "sourceUrl": "https://civitai.red/models/1759947?modelVersionId=1991781",
+      "metadataUrl": "https://civitai.com/api/v1/models/1759947",
+      "sourceModelName": "Miyu Edelfelt | Fate/Kalleid Liner Prisma Illya (6 outfits) [COMMISION]",
+      "versionName": "Kaleid",
+      "creator": "C2P",
+      "downloadUrl": "https://civitai.com/api/download/models/1991781",
+      "sha256": "484598df9f28aec70e2ef1fd6fd78e96f613dc9861338b1eb2fced7eba90ad36",
+      "sizeBytes": 114492668,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 474432,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-933301-2624230",
+      "name": "Mizumiya Su",
+      "franchise": "Hololive",
+      "filename": "mizumiya-su-2624230.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "mizumiyasu"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 933301,
+      "modelVersionId": 2624230,
+      "fileId": 2511805,
+      "sourceUrl": "https://civitai.red/models/933301?modelVersionId=2624230",
+      "metadataUrl": "https://civitai.com/api/v1/models/933301",
+      "sourceModelName": "[Dekinai] Mizumiya Su Illustrious XL (3 outfits) | Hololive",
+      "versionName": "1.1",
+      "creator": "BenkyouDekinAI",
+      "downloadUrl": "https://civitai.com/api/download/models/2624230",
+      "sha256": "382d9cf3bd014e59fe4acf22f691c8f4facbdb2326dde09372fecf34238447dc",
+      "sizeBytes": 114443684,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 425448,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1340394-1513668",
+      "name": "Modernia",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "modernia-1513668.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "moderniadef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1340394,
+      "modelVersionId": 1513668,
+      "fileId": 1413879,
+      "sourceUrl": "https://civitai.red/models/1340394?modelVersionId=1513668",
+      "metadataUrl": "https://civitai.com/api/v1/models/1340394",
+      "sourceModelName": "Modernia (NIKKE) SDXL LoRA [Illustrious] | 3 Outfits",
+      "versionName": "modernia-nikke-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1513668",
+      "sha256": "cd546a44452af43901f3fff0156b5fce4ce1a5f8bc3377659fd3f50868ca6ffc",
+      "sizeBytes": 57459076,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent",
+          "Image"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 448968,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-942367-1064605",
+      "name": "Momo Ayase",
+      "franchise": "Dandadan",
+      "filename": "momo-ayase-1064605.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ChopioMomo"
+      ],
+      "strength": 0.7,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 942367,
+      "modelVersionId": 1064605,
+      "fileId": 970091,
+      "sourceUrl": "https://civitai.red/models/942367?modelVersionId=1064605",
+      "metadataUrl": "https://civitai.com/api/v1/models/942367",
+      "sourceModelName": "Dandadan - Momo Ayase [Pony + Illustrious]",
+      "versionName": "v1.0 [Illustrious]",
+      "creator": "turkey910",
+      "downloadUrl": "https://civitai.com/api/download/models/1064605",
+      "sha256": "b65aad5f81e48437be9bcb12d225eea4f117867232eff47cfca0fbb9066ac272",
+      "sizeBytes": 85429204,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 312872,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1017067-1140381",
+      "name": "Mythra",
+      "franchise": "Xenoblade Chronicles 2",
+      "filename": "mythra-1140381.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "mthrdef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1017067,
+      "modelVersionId": 1140381,
+      "fileId": 1045341,
+      "sourceUrl": "https://civitai.red/models/1017067?modelVersionId=1140381",
+      "metadataUrl": "https://civitai.com/api/v1/models/1017067",
+      "sourceModelName": "Mythra/ヒカリ/Hikari (Xenoblade Chronicles 2) SDXL LoRA [Illustrious] | 3 Outfits",
+      "versionName": "mythra-xb-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1140381",
+      "sha256": "9a456e486c602d70f9bba4d72de40a95d7a8fd094f9a90b43aa2d11d8d0f9b56",
+      "sizeBytes": 57457740,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 447632,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1252857-1412426",
+      "name": "Nezuko Kamado",
+      "franchise": "Demon Slayer",
+      "filename": "nezuko-kamado-1412426.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "nezukochan"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1252857,
+      "modelVersionId": 1412426,
+      "fileId": 1314624,
+      "sourceUrl": "https://civitai.red/models/1252857?modelVersionId=1412426",
+      "metadataUrl": "https://civitai.com/api/v1/models/1252857",
+      "sourceModelName": "Nezuko Kamado (竈門 禰豆子) | Kimetsu no Yaiba / Demon Slayer | Anime Character | IllustriousXL",
+      "versionName": "V1",
+      "creator": "QuestGlitch",
+      "downloadUrl": "https://civitai.com/api/download/models/1412426",
+      "sha256": "4d95a5a14554623d0530499e5654026bb7949d9e57ac01351eaecdbe09cf805e",
+      "sizeBytes": 228458332,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "Rent",
+          "RentCivit"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 423840,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1157558-1301963",
+      "name": "Orihime Inoue",
+      "franchise": "Bleach",
+      "filename": "orihime-inoue-1301963.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "inrhmdf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1157558,
+      "modelVersionId": 1301963,
+      "fileId": 1206219,
+      "sourceUrl": "https://civitai.red/models/1157558?modelVersionId=1301963",
+      "metadataUrl": "https://civitai.com/api/v1/models/1157558",
+      "sourceModelName": "Inoue Orihime/井上 織姫 (Bleach) SDXL LoRA [Illustrious] | 6 Outfits",
+      "versionName": "orihime-bleach-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1301963",
+      "sha256": "437373fe88d60fc93b384c42215c13696a99cdcbcc6f56d758e6c3f70a87a164",
+      "sizeBytes": 57515964,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 505856,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-949620-2753074",
+      "name": "Pecorine",
+      "franchise": "Princess Connect! Re:Dive",
+      "filename": "pecorine-2753074.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "pcrpeco",
+        "pecodef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 949620,
+      "modelVersionId": 2753074,
+      "fileId": 2639470,
+      "sourceUrl": "https://civitai.red/models/949620?modelVersionId=2753074",
+      "metadataUrl": "https://civitai.com/api/v1/models/949620",
+      "sourceModelName": "[IL v0.1 + Anima] Pecorine - Princess Connect | ペコリーヌ プリンセスコネクト!Re:Dive (13 costumes)",
+      "versionName": "v2.0 (IL)",
+      "creator": "Elesico",
+      "downloadUrl": "https://civitai.com/api/download/models/2753074",
+      "sha256": "1d4c9de53583386e6a6862a39e487d7a26724dbec6f1a292bfd1e7806ad1af15",
+      "sizeBytes": 28961428,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Sell",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 455384,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-2329377-2620310",
+      "name": "Perlica",
+      "franchise": "Arknights: Endfield",
+      "filename": "perlica-2620310.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Perlita"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 2329377,
+      "modelVersionId": 2620310,
+      "fileId": 2508141,
+      "sourceUrl": "https://civitai.red/models/2329377?modelVersionId=2620310",
+      "metadataUrl": "https://civitai.com/api/v1/models/2329377",
+      "sourceModelName": "Perlica - Arknights: Endfield - Illustrious",
+      "versionName": "V1",
+      "creator": "Reijiboo",
+      "downloadUrl": "https://civitai.com/api/download/models/2620310",
+      "sha256": "677f2b7dfe74f0324d96c4cd694017321f66f8e75715d212d5e7cc9de207993d",
+      "sizeBytes": 228458580,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 424088,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-91825-1393168",
+      "name": "Princess Zelda",
+      "franchise": "The Legend of Zelda",
+      "filename": "princess-zelda-1393168.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ChopioZelda"
+      ],
+      "strength": 0.7,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 91825,
+      "modelVersionId": 1393168,
+      "fileId": 1295566,
+      "sourceUrl": "https://civitai.red/models/91825?modelVersionId=1393168",
+      "metadataUrl": "https://civitai.com/api/v1/models/91825",
+      "sourceModelName": "Breath of the Wild - Zelda [1.5 + Pony + Illustrious]",
+      "versionName": "v1.0 [Illustrious]",
+      "creator": "turkey910",
+      "downloadUrl": "https://civitai.com/api/download/models/1393168",
+      "sha256": "cec64bdc2ec4cce9ab34eff135b96629cfcd5cc6ca09de356e89f93e6285a337",
+      "sizeBytes": 85428236,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Rent",
+          "RentCivit"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 311904,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1273499-1436697",
+      "name": "Privaty",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "privaty-1436697.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "privdf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1273499,
+      "modelVersionId": 1436697,
+      "fileId": 1337930,
+      "sourceUrl": "https://civitai.red/models/1273499?modelVersionId=1436697",
+      "metadataUrl": "https://civitai.com/api/v1/models/1273499",
+      "sourceModelName": "Privaty (NIKKE) SDXL LoRA [Illustrious] | 4 Outfits",
+      "versionName": "privaty-nikke-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1436697",
+      "sha256": "84a9c6990d43b14ada8a60a17b03b9264c03ef20b0d82cf421a25f1ead50de8e",
+      "sizeBytes": 57487764,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 477656,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1017066-1140380",
+      "name": "Pyra",
+      "franchise": "Xenoblade Chronicles 2",
+      "filename": "pyra-1140380.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "prdef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1017066,
+      "modelVersionId": 1140380,
+      "fileId": 1045331,
+      "sourceUrl": "https://civitai.red/models/1017066?modelVersionId=1140380",
+      "metadataUrl": "https://civitai.com/api/v1/models/1017066",
+      "sourceModelName": "Pyra/ホムラ/Homura (Xenoblade Chronicles 2) SDXL LoRA [Illustrious] | 2 Outfits",
+      "versionName": "pyra-xb-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1140380",
+      "sha256": "95e545f2441a6d34127e7545617a34a7ca94a4c44d1d335680c80e938da6c93b",
+      "sizeBytes": 57447604,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 437496,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1395548-1577428",
+      "name": "Rapunzel",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "rapunzel-1577428.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "rpnzldef"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1395548,
+      "modelVersionId": 1577428,
+      "fileId": 1477153,
+      "sourceUrl": "https://civitai.red/models/1395548?modelVersionId=1577428",
+      "metadataUrl": "https://civitai.com/api/v1/models/1395548",
+      "sourceModelName": "Rapunzel (NIKKE) SDXL LoRA [Illustrious] | 2 Outfits",
+      "versionName": "rapunzel-nikke-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1577428",
+      "sha256": "b05eb362c5bd9b9bb0c6aacbbe294c0a31523a07a31333842fe1c2b13ef78a41",
+      "sizeBytes": 57447676,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 437568,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-373967-1357021",
+      "name": "Reisalin Stout / Ryza",
+      "franchise": "Atelier Ryza",
+      "filename": "reisalin-stout-ryza-1357021.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "reisalin stout"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 373967,
+      "modelVersionId": 1357021,
+      "fileId": 1260286,
+      "sourceUrl": "https://civitai.red/models/373967?modelVersionId=1357021",
+      "metadataUrl": "https://civitai.com/api/v1/models/373967",
+      "sourceModelName": "Reisalin Stout / Atelier Ryza (Illustrious / Pony)",
+      "versionName": "illustrious",
+      "creator": "tappy",
+      "downloadUrl": "https://civitai.com/api/download/models/1357021",
+      "sha256": "f8b92418dd11a670e568434162d04e43261119fe5bd48c543830d95fe1eac614",
+      "sizeBytes": 88047240,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 345176,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1450442-1639932",
+      "name": "Revy",
+      "franchise": "Black Lagoon",
+      "filename": "revy-1639932.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Revy (character)"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1450442,
+      "modelVersionId": 1639932,
+      "fileId": 1542007,
+      "sourceUrl": "https://civitai.red/models/1450442?modelVersionId=1639932",
+      "metadataUrl": "https://civitai.com/api/v1/models/1450442",
+      "sourceModelName": "Revy (Black Lagoon) - Commission!",
+      "versionName": "V1",
+      "creator": "MetalchromeX",
+      "downloadUrl": "https://civitai.com/api/download/models/1639932",
+      "sha256": "653e6cf96fe04d05bc21afc38d7ac1f010ca780ca922118e4191e5ab22e2417a",
+      "sizeBytes": 228469412,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Sell",
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 434920,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-392486-1189464",
+      "name": "Rimuru Tempest",
+      "franchise": "That Time I Got Reincarnated as a Slime",
+      "filename": "rimuru-tempest-1189464.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "rimuru_tempest"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 392486,
+      "modelVersionId": 1189464,
+      "fileId": 1094784,
+      "sourceUrl": "https://civitai.red/models/392486?modelVersionId=1189464",
+      "metadataUrl": "https://civitai.com/api/v1/models/392486",
+      "sourceModelName": "Rimuru Tempest | Tensei shitara Slime Datta Ken / That Time I Got Reincarnated as a Slime / TenSura",
+      "versionName": "ilxl-v0.1",
+      "creator": "andinmaro146",
+      "downloadUrl": "https://civitai.com/api/download/models/1189464",
+      "sha256": "64a1122b420381e3c66ffd0738c8d3b8774683c690b92d5a7f0d780890301fce",
+      "sizeBytes": 228483492,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Rent",
+          "RentCivit",
+          "Image"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 449000,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1155590-1299675",
+      "name": "Roxy Migurdia",
+      "franchise": "Mushoku Tensei",
+      "filename": "roxy-migurdia-1299675.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "roxy-default",
+        "roxy migurdia"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1155590,
+      "modelVersionId": 1299675,
+      "fileId": 1203904,
+      "sourceUrl": "https://civitai.red/models/1155590?modelVersionId=1299675",
+      "metadataUrl": "https://civitai.com/api/v1/models/1155590",
+      "sourceModelName": "IllustriousXL - Roxy Migurdia ロキシー ミグルディア - mushoku tensei",
+      "versionName": "ロキシー 1期衣装Lora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1299675",
+      "sha256": "7263e8bf401c88afb32191edd24584022afb7cd2901ef823a6fc078e733d2649",
+      "sizeBytes": 177173896,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 347992,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-955545-2810860",
+      "name": "Ruby Hoshino",
+      "franchise": "Oshi no Ko",
+      "filename": "ruby-hoshino-2810860.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "hoshino ruby"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 955545,
+      "modelVersionId": 2810860,
+      "fileId": 2696662,
+      "sourceUrl": "https://civitai.red/models/955545?modelVersionId=2810860",
+      "metadataUrl": "https://civitai.com/api/v1/models/955545",
+      "sourceModelName": "Hoshino Ruby | Oshi no Ko | 推しの子",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2810860",
+      "sha256": "c85457b70ea5dd1fda0537324ab0f61c9e80cba84c085d37dc6971606df3308c",
+      "sizeBytes": 114445164,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 426928,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1615349-1828148",
+      "name": "Rumi",
+      "franchise": "K-Pop Demon Hunters",
+      "filename": "rumi-1828148.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Rum1KP0P"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1615349,
+      "modelVersionId": 1828148,
+      "fileId": 1729044,
+      "sourceUrl": "https://civitai.red/models/1615349?modelVersionId=1828148",
+      "metadataUrl": "https://civitai.com/api/v1/models/1615349",
+      "sourceModelName": "Rumi (K-Pop Demon Hunters) LoRa Illustrious",
+      "versionName": "V1",
+      "creator": "kedicpeep",
+      "downloadUrl": "https://civitai.com/api/download/models/1828148",
+      "sha256": "5a10fd0faacba62483629d0d1df2a17c67be680510692c31f9cf33053fd87db0",
+      "sizeBytes": 228459340,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 424848,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1342767-2540886",
+      "name": "Runa Shinomiya",
+      "franchise": "VSPO!",
+      "filename": "runa-shinomiya-2540886.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ShinomiyAngel"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1342767,
+      "modelVersionId": 2540886,
+      "fileId": 2429026,
+      "sourceUrl": "https://civitai.red/models/1342767?modelVersionId=2540886",
+      "metadataUrl": "https://civitai.com/api/v1/models/1342767",
+      "sourceModelName": "紫宮るな Shinomiya Runa 2.0 [21 Outfits] / ぶいすぽっ！ Vspo! [Illustrious] VTbuer",
+      "versionName": "IL V2.0 [21 Outfits]",
+      "creator": "andraste",
+      "downloadUrl": "https://civitai.com/api/download/models/2540886",
+      "sha256": "19293d964447f9cb6df5f197d9b093d0894dd9e2924e023129e6811d09d07e0d",
+      "sizeBytes": 228490028,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 455536,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1133848-2401473",
+      "name": "Sakuya Izayoi",
+      "franchise": "Touhou Project",
+      "filename": "sakuya-izayoi-2401473.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "izayoi sakuya"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1133848,
+      "modelVersionId": 2401473,
+      "fileId": 2291872,
+      "sourceUrl": "https://civitai.red/models/1133848?modelVersionId=2401473",
+      "metadataUrl": "https://civitai.com/api/v1/models/1133848",
+      "sourceModelName": "Sakuya Izayoi (Touhou Project) - 十六夜咲夜 (東方)",
+      "versionName": "Illustrious V3",
+      "creator": "RDMPrompt",
+      "downloadUrl": "https://civitai.com/api/download/models/2401473",
+      "sha256": "8dce01ba9dbbf01f532b39232cd1580a233fdd7660130d9614e895de4f67b55c",
+      "sizeBytes": 228450268,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 415776,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1171460-2377116",
+      "name": "Satori Komeiji",
+      "franchise": "Touhou Project",
+      "filename": "satori-komeiji-2377116.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "komeiji satori"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1171460,
+      "modelVersionId": 2377116,
+      "fileId": 2267655,
+      "sourceUrl": "https://civitai.red/models/1171460?modelVersionId=2377116",
+      "metadataUrl": "https://civitai.com/api/v1/models/1171460",
+      "sourceModelName": "Satori Komeiji (Touhou Project) - 古明地さとり (東方)",
+      "versionName": "Illustrious V3",
+      "creator": "RDMPrompt",
+      "downloadUrl": "https://civitai.com/api/download/models/2377116",
+      "sha256": "212d646fd0683755797981f9015f2f044afcd0615c6dffe8770c1cc4bae612a2",
+      "sizeBytes": 228450268,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 415776,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1416345-1600882",
+      "name": "Scarlet",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "scarlet-1600882.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "scrltdf"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1416345,
+      "modelVersionId": 1600882,
+      "fileId": 1500852,
+      "sourceUrl": "https://civitai.red/models/1416345?modelVersionId=1600882",
+      "metadataUrl": "https://civitai.com/api/v1/models/1416345",
+      "sourceModelName": "Scarlet (NIKKE) SDXL LoRA [Illustrious] | 3 Outfits",
+      "versionName": "scarlet-nikke-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1600882",
+      "sha256": "3bc375417241f4fa3d15788e827977544caf5d76033f95f7dc2ea8bb60823781",
+      "sizeBytes": 57494004,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 483896,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-831426-1914522",
+      "name": "Seiko Ayase",
+      "franchise": "Dandadan",
+      "filename": "seiko-ayase-1914522.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "seiko_wz"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 831426,
+      "modelVersionId": 1914522,
+      "fileId": 1812913,
+      "sourceUrl": "https://civitai.red/models/831426?modelVersionId=1914522",
+      "metadataUrl": "https://civitai.com/api/v1/models/831426",
+      "sourceModelName": "Seiko Ayase | DANDADAN LoRa",
+      "versionName": "Illustrious v2.0",
+      "creator": "WhiteZ",
+      "downloadUrl": "https://civitai.com/api/download/models/1914522",
+      "sha256": "e20504ef1fb435cb4e521c4a1aeb47f21d044506e36553a9b82ab7fced16a54b",
+      "sizeBytes": 37573816,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 423896,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1082590-1215571",
+      "name": "Shigure Ui",
+      "franchise": "Shigure Ui",
+      "filename": "shigure-ui-1215571.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ui-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1082590,
+      "modelVersionId": 1215571,
+      "fileId": 1120915,
+      "sourceUrl": "https://civitai.red/models/1082590?modelVersionId=1215571",
+      "metadataUrl": "https://civitai.com/api/v1/models/1082590",
+      "sourceModelName": "IllustriousXL - Shigure Ui しぐれうい - Vtuber",
+      "versionName": "通常しぐれうい Lora",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1215571",
+      "sha256": "6bf32a00a02c67ca56a192f480f2f96f90314f0b4a40fa85bbf0c6fa7e85680a",
+      "sizeBytes": 177185744,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 359840,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1204238-1385098",
+      "name": "Shirakami Fubuki",
+      "franchise": "Hololive",
+      "filename": "shirakami-fubuki-1385098.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "fbk_base"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1204238,
+      "modelVersionId": 1385098,
+      "fileId": 1287769,
+      "sourceUrl": "https://civitai.red/models/1204238?modelVersionId=1385098",
+      "metadataUrl": "https://civitai.com/api/v1/models/1204238",
+      "sourceModelName": "Shirakami Fubuki 10 outfits [illustriousXL]  Hololive",
+      "versionName": "v2",
+      "creator": "holostrawberry",
+      "downloadUrl": "https://civitai.com/api/download/models/1385098",
+      "sha256": "8907f026f81743cd268a43c7e3645d152eec9891fe925ce591097d6ed8d17af8",
+      "sizeBytes": 101605356,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 432528,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1739002-1968062",
+      "name": "Sora",
+      "franchise": "Goddess of Victory: NIKKE",
+      "filename": "sora-1968062.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "srnk"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1739002,
+      "modelVersionId": 1968062,
+      "fileId": 1865534,
+      "sourceUrl": "https://civitai.red/models/1739002?modelVersionId=1968062",
+      "metadataUrl": "https://civitai.com/api/v1/models/1739002",
+      "sourceModelName": "Sora (NIKKE) SDXL LoRA [Illustrious]",
+      "versionName": "sora-nikke-richy-v1_ixl",
+      "creator": "richyrich515",
+      "downloadUrl": "https://civitai.com/api/download/models/1968062",
+      "sha256": "a8451cc39cb1e81f0979ce1a1a21c46f2ea3ed887305bdd53717f87d4a37a79b",
+      "sizeBytes": 57437460,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 427352,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1218512-2972989",
+      "name": "Tsuna Nekota",
+      "franchise": "VSPO!",
+      "filename": "tsuna-nekota-2972989.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1218512,
+      "modelVersionId": 2972989,
+      "fileId": 2852595,
+      "sourceUrl": "https://civitai.red/models/1218512?modelVersionId=2972989",
+      "metadataUrl": "https://civitai.com/api/v1/models/1218512",
+      "sourceModelName": "猫汰つな Nekota Tsuna 2.0 / ぶいすぽっ！ Vspo! [Illustrious][24 Outfits]",
+      "versionName": "IL V2.0 [24 Outfits]",
+      "creator": "andraste",
+      "downloadUrl": "https://civitai.com/api/download/models/2972989",
+      "sha256": "9f50df2646c7c7676562adf75c511f3b127838c901ed428df6c5f3a147d6ad9b",
+      "sizeBytes": 228503556,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 469064,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-412136-1075687",
+      "name": "Tsunade",
+      "franchise": "Naruto Shippuden",
+      "filename": "tsunade-1075687.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "ChopioTsunade"
+      ],
+      "strength": 0.7,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 412136,
+      "modelVersionId": 1075687,
+      "fileId": 980767,
+      "sourceUrl": "https://civitai.red/models/412136?modelVersionId=1075687",
+      "metadataUrl": "https://civitai.com/api/v1/models/412136",
+      "sourceModelName": "Naruto Shippuden - Tsunade [Pony + Illustrious]",
+      "versionName": "v1.0 [Illustrious]",
+      "creator": "turkey910",
+      "downloadUrl": "https://civitai.com/api/download/models/1075687",
+      "sha256": "3f79be53491632f774b407bf8a24a3a674c4344a05c39119a40d23aca94e8926",
+      "sizeBytes": 85428724,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": false
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 312392,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-940615-1218167",
+      "name": "Videl",
+      "franchise": "Dragon Ball",
+      "filename": "videl-1218167.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "videl"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 940615,
+      "modelVersionId": 1218167,
+      "fileId": 1123519,
+      "sourceUrl": "https://civitai.red/models/940615?modelVersionId=1218167",
+      "metadataUrl": "https://civitai.com/api/v1/models/940615",
+      "sourceModelName": "Videl - Dragon Ball",
+      "versionName": "Illustrious v2.0",
+      "creator": "HellKaiza",
+      "downloadUrl": "https://civitai.com/api/download/models/1218167",
+      "sha256": "41e3e725e32532b8568d385c0824d5fe5b2675758f28b8f435c23f4d700701d5",
+      "sizeBytes": 228481612,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 447120,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1022054-2542753",
+      "name": "Yor Forger",
+      "franchise": "SPY x FAMILY",
+      "filename": "yor-forger-2542753.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "yor briar"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1022054,
+      "modelVersionId": 2542753,
+      "fileId": 2430947,
+      "sourceUrl": "https://civitai.red/models/1022054?modelVersionId=2542753",
+      "metadataUrl": "https://civitai.com/api/v1/models/1022054",
+      "sourceModelName": "Yor Briar | SPY x FAMILY | スパイファミリー",
+      "versionName": "v2.0",
+      "creator": "duongve13112002",
+      "downloadUrl": "https://civitai.com/api/download/models/2542753",
+      "sha256": "1429815eb825e2d231982b49973be90ab2da760b6b9232bc721a05c97a1e7eb5",
+      "sizeBytes": 114444236,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 426000,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1189744-2985562",
+      "name": "Yukari Yakumo",
+      "franchise": "Touhou Project",
+      "filename": "yukari-yakumo-2985562.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "yakumo yukari"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1189744,
+      "modelVersionId": 2985562,
+      "fileId": 2865079,
+      "sourceUrl": "https://civitai.red/models/1189744?modelVersionId=2985562",
+      "metadataUrl": "https://civitai.com/api/v1/models/1189744",
+      "sourceModelName": "Yukari Yakumo (Touhou Project) - 八雲紫 (東方)",
+      "versionName": "Illustrious V4",
+      "creator": "RDMPrompt",
+      "downloadUrl": "https://civitai.com/api/download/models/2985562",
+      "sha256": "4f0d98fd7af45af6b3c291b3f401c67c19b5f4580842e22859e4818c2bfaff21",
+      "sizeBytes": 228450268,
+      "license": {
+        "allowNoCredit": false,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "binary/octet-stream",
+        "safetensorsHeaderLength": 415776,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1259576-1420270",
+      "name": "Yuni",
+      "franchise": "Princess Connect! Re:Dive",
+      "filename": "yuni-1420270.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "yuni-default"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1259576,
+      "modelVersionId": 1420270,
+      "fileId": 1322030,
+      "sourceUrl": "https://civitai.red/models/1259576?modelVersionId=1420270",
+      "metadataUrl": "https://civitai.com/api/v1/models/1259576",
+      "sourceModelName": "IllustriousXL - Yuni ユニ - princess connect re:dive",
+      "versionName": "通常衣装",
+      "creator": "Ibukimakisiko",
+      "downloadUrl": "https://civitai.com/api/download/models/1420270",
+      "sha256": "a3957d8178dd6cce9645bbfdebf062e8f6011a79d40b4708c16af04520d28ca3",
+      "sizeBytes": 177176008,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 350104,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    },
+    {
+      "id": "civitai-1704581-1929026",
+      "name": "Zoey",
+      "franchise": "K-Pop Demon Hunters",
+      "filename": "zoey-1929026.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "Z03yKP0P"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Starting value; adjust per prompt and checkpoint.",
+      "modelId": 1704581,
+      "modelVersionId": 1929026,
+      "fileId": 1829548,
+      "sourceUrl": "https://civitai.red/models/1704581?modelVersionId=1929026",
+      "metadataUrl": "https://civitai.com/api/v1/models/1704581",
+      "sourceModelName": "Zoey (K-Pop Demon Hunters) LoRa Illustrious",
+      "versionName": "V1",
+      "creator": "kedicpeep",
+      "downloadUrl": "https://civitai.com/api/download/models/1929026",
+      "sha256": "91d4423f830ccb8982abff022166e74b15609518b76bf8f3566533ae0fdbba29",
+      "sizeBytes": 228460092,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "availability": "Public",
+      "verification": {
+        "checkedAt": "2026-09-12T13:35:52Z",
+        "method": "Unauthenticated HTTP GET with Range: bytes=0-7",
+        "httpStatus": 206,
+        "contentType": "application/octet-stream",
+        "safetensorsHeaderLength": 425600,
+        "sha256Source": "Civitai file metadata; full bytes checked during installation"
+      }
+    }
+  ],
+  "civitaiModelCount": 102,
+  "legacyModelCount": 1
+}
