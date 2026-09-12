@@ -6,12 +6,15 @@
       "id": "wai-illustrious-v150",
       "name": "WAI Illustrious v15.0 (existing checkpoint)",
       "filename": "waiNSFWIllustrious_v150.safetensors",
-      "downloadUrl": "https://huggingface.co/nnnn1111/models-moved/resolve/f04b87e20ed4d0d3f9526feb998d3a019b5c8616/waiNSFWIllustrious_v150.safetensors",
+      "downloadUrl": "https://civitai.com/api/download/models/2167369?fileId=2062324",
       "sha256": "befc694a296f75e996488ebf9f9db8a1493bd059b6e704b975829e87d5aeb4fa",
       "sizeBytes": 6938040682,
-      "sourceUrl": "https://huggingface.co/nnnn1111/models-moved",
-      "hashSource": "Hugging Face API LFS oid, verified 2026-09-12",
-      "repositoryRevision": "f04b87e20ed4d0d3f9526feb998d3a019b5c8616"
+      "sourceUrl": "https://civitai.red/models/827184?modelVersionId=2167369",
+      "hashSource": "Civitai file 2062324 SHA256 equals the existing Hugging Face LFS oid; exact range size verified 2026-09-12",
+      "modelVersionId": 2167369,
+      "fileId": 2062324,
+      "originalRepositoryRevision": "f04b87e20ed4d0d3f9526feb998d3a019b5c8616",
+      "downloadNote": "Same checkpoint bytes and existing local filename. Civitai source avoids the Hugging Face HTTP 429 encountered by the hosted builder."
     }
   ]
 }
