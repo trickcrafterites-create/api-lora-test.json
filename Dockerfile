@@ -1,4 +1,3 @@
-# syntax=docker/dockerfile:1
 # Keep the existing ComfyUI worker and checkpoint compatible with Illustrious LoRAs.
 FROM runpod/worker-comfyui:5.5.1-base
 
@@ -26,15 +25,10 @@ RUN python /opt/character-loras/download_loras.py \
     --output-dir /comfyui/models/loras --min-models 100 --workers 2 \
     --min-interval 6 --max-elapsed 1200
 
-# Keep style experiments in their own layer after the existing pinned catalog.
-# Civitai requires authentication for these files. Mount a BuildKit secret; never
-# pass the token through ARG, ENV, a committed URL, or a copied credentials file.
-COPY scripts/install_style_loras.py /opt/character-loras/install_style_loras.py
+# Optional style trials use the owner's private, authenticated asset broker at
+# runtime. No additional build-time weight downloads or credentials are needed.
 COPY catalog/style-loras.json /opt/character-loras/style-loras.json
-RUN --mount=type=secret,id=civitai_token,required=true \
-    python /opt/character-loras/install_style_loras.py \
-    --manifest /opt/character-loras/style-loras.json \
-    --output-dir /comfyui/models/loras \
-    --token-file /run/secrets/civitai_token
+COPY scripts/style_bootstrap.py /opt/character-loras/style_bootstrap.py
 
-# Inherit the upstream /start.sh command; no weights are downloaded on cold starts.
+# Disabled by default. Always delegates to the unchanged upstream /start.sh.
+CMD ["python", "/opt/character-loras/style_bootstrap.py"]

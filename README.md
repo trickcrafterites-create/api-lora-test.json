@@ -1,6 +1,6 @@
 # Illustrious character LoRA endpoint
 
-Runpod ComfyUI worker with **103 character LoRAs**: 102 curated Civitai characters plus the existing Kim Possible model. The Docker image includes all weights; inference does not download models at startup.
+Runpod ComfyUI worker with **103 character LoRAs**: 102 curated Civitai characters plus the existing Kim Possible model. The Docker image includes the checkpoint and character weights; optional style trials can use a private startup download.
 
 The [catalog](catalog/character-loras.json) pins compatible Illustrious files, exact filenames, hashes, sizes, activation words, creators and source permissions. The installer fails if any model is missing or fails validation. LoRA weights total 15.43 GB; the existing checkpoint adds 6.94 GB, before the base image.
 
@@ -17,12 +17,13 @@ See [deployment instructions](docs/deployment.md) for build limits, GitHub relea
 ## Draft style comparison
 
 `catalog/style-loras.json` pins Fine Anime Screencap Illustrious v3.0 and MeMaXL
-Illustrious v3.0 A in a separate final Docker layer. These two weights require
-authenticated Civitai downloads. The draft installer accepts only a mounted
-BuildKit secret; no token or model binary belongs in Git.
+Illustrious v3.0 A. The user-provided local files passed SHA256 and SafeTensors
+verification. The optional runtime bootstrap retrieves these exact files from
+the owner's private Vercel storage through a scoped Aelixhub broker. It does not
+connect to Civitai or require build secrets. No token or model binary belongs in Git.
 
-The existing checkpoint and all 103 character entries are unchanged. The styles
-have not been installed or tested by inference. Do not publish a worker release
-until the build system's secret support has been verified and full installation
-has passed. The current Runpod GitHub builder's documentation does not establish
-that it can supply this secret. See the deployment notes for the build command.
+The existing checkpoint, all 103 character entries and their Docker layers are
+unchanged. Style loading defaults off. Failure to load an optional style still
+starts the original worker for existing generation requests. The styles have
+not yet been installed on the hosted worker or tested by inference. See the
+deployment notes for the exact runtime contract and enable only after review.

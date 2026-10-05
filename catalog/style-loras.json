@@ -39,8 +39,11 @@
         "method": "Official model/version metadata. Anonymous GET returned HTTP 401.",
         "sha256Source": "Civitai metadata; full bytes must be verified during installation.",
         "weightsDownloaded": false,
-        "inferenceTested": false
-      }
+        "inferenceTested": false,
+        "localFileVerified": true,
+        "localVerification": "User-provided Downloads file: full SHA256 and SafeTensors boundaries verified on 2026-10-05; no source download performed by this installer."
+      },
+      "sizeBytes": 69792232
     },
     {
       "id": "style-civitai-269772-919342",
@@ -79,8 +82,11 @@
         "method": "Official model/version metadata. Anonymous GET returned HTTP 401.",
         "sha256Source": "Civitai metadata; full bytes must be verified during installation.",
         "weightsDownloaded": false,
-        "inferenceTested": false
-      }
+        "inferenceTested": false,
+        "localFileVerified": true,
+        "localVerification": "User-provided Downloads file: full SHA256 and SafeTensors boundaries verified on 2026-10-05; no source download performed by this installer."
+      },
+      "sizeBytes": 228456060
     }
   ]
 }
