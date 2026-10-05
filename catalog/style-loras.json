@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "baseModel": "Illustrious",
+  "models": [
+    {
+      "id": "style-civitai-345962-2553688",
+      "name": "Fine Anime Screencap XL",
+      "category": "style",
+      "filename": "anime_screencap-IL-NOOB_v3.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [
+        "anime screencap, anime coloring"
+      ],
+      "strength": 0.8,
+      "strengthNote": "Initial comparison value; not yet validated by image generation.",
+      "modelId": 345962,
+      "modelVersionId": 2553688,
+      "fileId": 2442115,
+      "sourceUrl": "https://civitai.com/models/345962?modelVersionId=2553688",
+      "metadataUrl": "https://civitai.com/api/v1/model-versions/2553688",
+      "versionName": "Illustrious v3.0",
+      "creator": "WhiteZ",
+      "downloadUrl": "https://civitai.com/api/download/models/2553688?fileId=2442115",
+      "sha256": "98f877ac296f6fbea8ee9d8098d7d2b5f5b4066a47ebec768917d8277490ef86",
+      "sizeEstimateKB": 68156.4765625,
+      "requiresAuthentication": true,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent"
+        ],
+        "allowDerivatives": false,
+        "allowDifferentLicense": true
+      },
+      "verification": {
+        "checkedAt": "2026-10-05",
+        "method": "Official model/version metadata. Anonymous GET returned HTTP 401.",
+        "sha256Source": "Civitai metadata; full bytes must be verified during installation.",
+        "weightsDownloaded": false,
+        "inferenceTested": false
+      }
+    },
+    {
+      "id": "style-civitai-269772-919342",
+      "name": "MeMaXL Flat Anime Style",
+      "category": "style",
+      "filename": "MeMaV3_ill.safetensors",
+      "baseModel": "Illustrious",
+      "triggerWords": [],
+      "strength": 0.6,
+      "strengthNote": "Initial comparison value; not yet validated by image generation.",
+      "modelId": 269772,
+      "modelVersionId": 919342,
+      "fileId": 826796,
+      "sourceUrl": "https://civitai.com/models/269772?modelVersionId=919342",
+      "metadataUrl": "https://civitai.com/api/v1/model-versions/919342",
+      "versionName": "v3.0 A [Illustrious-v1]",
+      "creator": "Fish788",
+      "downloadUrl": "https://civitai.com/api/download/models/919342?fileId=826796",
+      "sha256": "0bfc3f99446a14bb5dfd90d0fa22c826a4b50b667acbbb594bd06c29db0a4044",
+      "sizeEstimateKB": 223101.62109375,
+      "requiresAuthentication": true,
+      "license": {
+        "allowNoCredit": true,
+        "allowCommercialUse": [
+          "Image",
+          "RentCivit",
+          "Rent",
+          "Sell",
+          "SellMerge"
+        ],
+        "allowDerivatives": true,
+        "allowDifferentLicense": true
+      },
+      "verification": {
+        "checkedAt": "2026-10-05",
+        "method": "Official model/version metadata. Anonymous GET returned HTTP 401.",
+        "sha256Source": "Civitai metadata; full bytes must be verified during installation.",
+        "weightsDownloaded": false,
+        "inferenceTested": false
+      }
+    }
+  ]
+}

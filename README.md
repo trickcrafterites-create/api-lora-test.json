@@ -13,3 +13,16 @@ docker build --platform linux/amd64 -t api-lora-test:characters-v1 .
 Use [example-request.json](example-request.json) for a complete request. Your application should resolve a character ID server-side to its catalog filename and trigger words. Never send the Runpod API key to the browser.
 
 See [deployment instructions](docs/deployment.md) for build limits, GitHub release deployment, validation, and the workflow contract. Public file availability was checked during curation; the Docker build verifies each complete download. Catalog validation alone does not establish inference quality.
+
+## Draft style comparison
+
+`catalog/style-loras.json` pins Fine Anime Screencap Illustrious v3.0 and MeMaXL
+Illustrious v3.0 A in a separate final Docker layer. These two weights require
+authenticated Civitai downloads. The draft installer accepts only a mounted
+BuildKit secret; no token or model binary belongs in Git.
+
+The existing checkpoint and all 103 character entries are unchanged. The styles
+have not been installed or tested by inference. Do not publish a worker release
+until the build system's secret support has been verified and full installation
+has passed. The current Runpod GitHub builder's documentation does not establish
+that it can supply this secret. See the deployment notes for the build command.

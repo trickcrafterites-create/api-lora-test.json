@@ -20,6 +20,63 @@ Transfers make at most four attempts. All workers share HTTP 429 cooldowns and r
 
 ## Runpod deployment
 
+### Draft style weights and authenticated builds
+
+The separate `catalog/style-loras.json` adds two style comparisons without
+changing the checkpoint or the 103-character catalog. Fine Anime Screencap
+Illustrious v3.0 uses `anime screencap, anime coloring` and a proposed initial
+strength of 0.8; MeMaXL Illustrious v3.0 A lists no trigger and starts at 0.6.
+These are trial settings, not verified image-quality recommendations. The
+creator, exact version/file IDs, hash, permission metadata and links are pinned
+in the manifest. File-size estimates are explicitly separate from verified
+byte sizes. On October 5, both anonymous download requests returned HTTP 401.
+
+The style layer therefore requires a BuildKit-mounted `civitai_token` secret.
+The installer reads it without logging it, attaches authorization only to the
+official HTTPS Civitai model-download path, and removes authorization on CDN
+redirects. It reuses the existing SHA256/SafeTensors verifier and refuses a
+partial installation. Do not put the token in Git, `ARG`, `ENV`, copied files,
+download URL query parameters or image layers.
+
+Offline validation requires no token and performs no downloads:
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/install_style_loras.py --manifest catalog/style-loras.json --validate-only
+```
+
+Already-owned local downloads can be installed without network access or
+credentials. Keep each exact filename from the manifest in the source directory;
+all selected files must pass complete SHA256 and SafeTensors verification before
+any output is modified. Copies are verified again before atomic replacement:
+
+```bash
+python scripts/install_style_loras.py --manifest catalog/style-loras.json \
+  --source-dir /private/style-weights --output-dir /comfyui/models/loras
+```
+
+The local-files option and `--token-file` are mutually exclusive. Do not commit
+weights to Git or publish them as public release assets without confirming the
+creator's redistribution permission; commercial image rights alone do not
+establish a right to redistribute the raw weights.
+
+On a builder with verified BuildKit secret support, an authorized operator can
+provide a token from their existing secret store:
+
+```bash
+docker build --platform linux/amd64 \
+  --secret id=civitai_token,env=CIVITAI_TOKEN \
+  -t api-lora-test:style-tests .
+```
+
+The secret is used only while constructing the final style layer; it is not
+needed at inference startup. The published Runpod GitHub-build documentation
+does not establish BuildKit secret configuration. Do not create a GitHub
+release to that builder until secret delivery is confirmed, or build using a
+supported private secret mechanism and deploy the resulting versioned image.
+Never replace this requirement with a plaintext token. A draft PR or successful
+offline tests do not prove weight installation, a ready worker, or image quality.
+
 The endpoint is `xjm75w7tf0ycci`. For GitHub-connected endpoints, a commit by itself does **not** deploy the new image: create a GitHub release for the configured repository/branch, then follow the endpoint's **Builds** tab through Building, Uploading, Testing, and Completed. Confirm the active image points to that release before exposing new choices to production users.
 
 As checked on 2026-09-12, Runpod documents an **80 GB image limit**, a **30-minute Docker build step**, and a **160-minute total build/upload/test window**. Check the sum of catalog sizes plus the 6.94 GB checkpoint and the worker/CUDA dependencies against the image limit. Download pacing and a 20-minute catalog installation budget reserve time for image setup; actual completion still depends on upstream speed and quotas. The existing rgthree version is installed from its exact Git commit instead of fetching the entire Comfy node registry. If the build limit is exceeded, build the same Dockerfile on a machine with enough disk, publish a versioned image to a suitable container registry, and deploy that image through Runpod. Do not cut the catalog silently to make a failing build pass.
