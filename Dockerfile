@@ -25,4 +25,10 @@ RUN python /opt/character-loras/download_loras.py \
     --output-dir /comfyui/models/loras --min-models 100 --workers 2 \
     --min-interval 6 --max-elapsed 1200
 
-# Inherit the upstream /start.sh command; no weights are downloaded on cold starts.
+# Optional style trials use the owner's private, authenticated asset broker at
+# runtime. No additional build-time weight downloads or credentials are needed.
+COPY catalog/style-loras.json /opt/character-loras/style-loras.json
+COPY scripts/style_bootstrap.py /opt/character-loras/style_bootstrap.py
+
+# Disabled by default. Always delegates to the unchanged upstream /start.sh.
+CMD ["python", "/opt/character-loras/style_bootstrap.py"]
