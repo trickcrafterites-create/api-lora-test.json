@@ -38,6 +38,11 @@ _BLOB_HOST = re.compile(
     re.ASCII,
 )
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z", re.ASCII)
+_SAFE_LORA_FILENAME = re.compile(
+    r"[A-Za-z0-9][A-Za-z0-9._-]*\.safetensors\Z",
+    re.ASCII | re.IGNORECASE,
+)
+_PRIVATE_BLOB_HOST_ENV = "AELIX_PRIVATE_LORA_BLOB_HOST"
 _REQUIRED_SIGNED_QUERY = ("vercel-blob-delegation", "vercel-blob-signature")
 _PROCESS_LOCKS: dict[str, threading.Lock] = {}
 _PROCESS_LOCKS_GUARD = threading.Lock()
@@ -56,8 +61,19 @@ def _reject_controls(value: str, label: str) -> None:
         raise PrivateLoraError(f"{label} contains whitespace or control characters")
 
 
-def validate_signed_blob_url(value: object) -> str:
-    """Accept only one directly fetchable, signed private Vercel Blob URL."""
+def validate_signed_blob_url(value: object, expected_sha256: object) -> str:
+    """Accept only the configured store's exact signed and digest-bound object URL."""
+    if not isinstance(expected_sha256, str) or not _SHA256.fullmatch(expected_sha256.lower()):
+        raise PrivateLoraError("sha256 must be exactly 64 hexadecimal characters")
+    normalized_sha256 = expected_sha256.lower()
+    configured_host = os.environ.get(_PRIVATE_BLOB_HOST_ENV, "")
+    if (
+        not configured_host
+        or not configured_host.isascii()
+        or configured_host != configured_host.strip().lower()
+        or not _BLOB_HOST.fullmatch(configured_host)
+    ):
+        raise PrivateLoraError("private LoRA Blob host is not configured")
     if (
         not isinstance(value, str)
         or not value
@@ -72,14 +88,28 @@ def validate_signed_blob_url(value: object) -> str:
     except ValueError as exc:
         raise PrivateLoraError("signed_url is malformed") from exc
     hostname = parsed.hostname
-    if parsed.scheme.lower() != "https" or not hostname or not _BLOB_HOST.fullmatch(hostname.lower()):
+    if parsed.scheme.lower() != "https" or not hostname or hostname.lower() != configured_host:
         raise PrivateLoraError("signed_url must use the approved private Vercel Blob HTTPS host")
     if parsed.username is not None or parsed.password is not None or port is not None:
         raise PrivateLoraError("signed_url must not contain credentials or a port")
     if parsed.fragment:
         raise PrivateLoraError("signed_url must not contain a fragment")
-    if not parsed.path or parsed.path == "/" or "\\" in parsed.path:
+    if "\\" in parsed.path:
         raise PrivateLoraError("signed_url must identify one Blob object")
+    path_parts = parsed.path.split("/")
+    if len(path_parts) != 7 or path_parts[:4] != ["", "style-weights", "anima-loras", "v1"]:
+        raise PrivateLoraError("signed_url must use the private Anima LoRA namespace")
+    upload_id, path_sha256, filename = path_parts[4:]
+    try:
+        canonical_upload_id = str(uuid.UUID(upload_id))
+    except (ValueError, AttributeError) as exc:
+        raise PrivateLoraError("signed_url contains an invalid upload ID") from exc
+    if upload_id != canonical_upload_id:
+        raise PrivateLoraError("signed_url contains an invalid upload ID")
+    if not _SHA256.fullmatch(path_sha256) or path_sha256 != normalized_sha256:
+        raise PrivateLoraError("signed_url path digest does not match sha256")
+    if not 13 <= len(filename) <= 180 or not _SAFE_LORA_FILENAME.fullmatch(filename):
+        raise PrivateLoraError("signed_url contains an invalid LoRA filename")
     try:
         pairs = urllib.parse.parse_qsl(
             parsed.query,
@@ -495,8 +525,8 @@ def materialize_signed_lora(
     timeout: float = 300,
 ) -> Path:
     """Return a verified cache path for exactly one signed and pinned Blob object."""
-    validated_url = validate_signed_blob_url(signed_url)
     normalized_sha, expected_size = validate_pin(sha256, size_bytes)
+    validated_url = validate_signed_blob_url(signed_url, normalized_sha)
     if not isinstance(timeout, (int, float)) or not math.isfinite(timeout) or timeout <= 0:
         raise PrivateLoraError("download timeout must be finite and positive")
     if cache_dir is None:

@@ -2,6 +2,7 @@ import concurrent.futures
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import struct
 import sys
@@ -61,8 +62,17 @@ class RuntimeLoraTests(unittest.TestCase):
         self.cache = Path(self.temp.name) / "cache"
         self.payload = safetensors_bytes()
         self.sha256 = hashlib.sha256(self.payload).hexdigest()
+        self.upload_id = "11111111-1111-4111-8111-111111111111"
+        self.host = "store123.private.blob.vercel-storage.com"
+        host_environment = patch.dict(
+            os.environ,
+            {"AELIX_PRIVATE_LORA_BLOB_HOST": self.host},
+        )
+        host_environment.start()
+        self.addCleanup(host_environment.stop)
         self.url = (
-            "https://store123.private.blob.vercel-storage.com/owner/lora.safetensors"
+            f"https://{self.host}/style-weights/anima-loras/v1/"
+            f"{self.upload_id}/{self.sha256}/private-lora.safetensors"
             "?vercel-blob-delegation=delegation.token"
             "&vercel-blob-signature=signature_value"
         )
@@ -77,7 +87,7 @@ class RuntimeLoraTests(unittest.TestCase):
         )
 
     def test_url_accepts_only_direct_signed_private_blob_objects(self):
-        self.assertEqual(runtime.validate_signed_blob_url(self.url), self.url)
+        self.assertEqual(runtime.validate_signed_blob_url(self.url, self.sha256), self.url)
         invalid_urls = [
             self.url.replace("https://", "http://"),
             self.url.replace("store123.private", "store123.public"),
@@ -88,12 +98,39 @@ class RuntimeLoraTests(unittest.TestCase):
             self.url.replace("&vercel-blob-signature=signature_value", ""),
             self.url.replace("signature_value", ""),
             self.url + "&vercel-blob-signature=duplicate",
-            self.url.replace("/owner/lora.safetensors", "/"),
+            self.url.replace(
+                f"/style-weights/anima-loras/v1/{self.upload_id}/{self.sha256}/private-lora.safetensors",
+                "/",
+            ),
         ]
         for value in invalid_urls:
             with self.subTest(value=value[:80]):
                 with self.assertRaises(runtime.PrivateLoraError):
-                    runtime.validate_signed_blob_url(value)
+                    runtime.validate_signed_blob_url(value, self.sha256)
+
+    def test_url_rejects_another_valid_private_blob_store(self):
+        wrong_store = self.url.replace(self.host, "store999.private.blob.vercel-storage.com")
+        with self.assertRaisesRegex(runtime.PrivateLoraError, "approved private"):
+            runtime.validate_signed_blob_url(wrong_store, self.sha256)
+
+    def test_url_requires_the_exact_private_lora_namespace_and_safe_path(self):
+        invalid_paths = [
+            self.url.replace("/style-weights/anima-loras/v1/", "/other/anima-loras/v1/"),
+            self.url.replace(self.upload_id, "not-a-uuid"),
+            self.url.replace("private-lora.safetensors", "../private-lora.safetensors"),
+            self.url.replace("private-lora.safetensors", "private%2Flora.safetensors"),
+            self.url.replace("private-lora.safetensors", "private-lora.ckpt"),
+        ]
+        for value in invalid_paths:
+            with self.subTest(value=value[:120]):
+                with self.assertRaises(runtime.PrivateLoraError):
+                    runtime.validate_signed_blob_url(value, self.sha256)
+
+    def test_url_path_digest_must_equal_the_sha256_input(self):
+        wrong_digest = "f" * 64 if self.sha256 != "f" * 64 else "e" * 64
+        mismatched_url = self.url.replace(f"/{self.sha256}/", f"/{wrong_digest}/")
+        with self.assertRaisesRegex(runtime.PrivateLoraError, "path digest"):
+            runtime.validate_signed_blob_url(mismatched_url, self.sha256)
 
     def test_pin_requires_exact_hash_and_at_most_four_gib(self):
         self.assertEqual(runtime.validate_pin(self.sha256.upper(), len(self.payload)), (self.sha256, len(self.payload)))
