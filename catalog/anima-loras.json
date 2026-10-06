@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "family": "Anima-2.9B-40",
+  "models": [],
+  "note": "Intentionally empty. Add only exact native 40-block or already-remapped 28-to-40 Anima 2.9B files after installation review. Raw 28-block, SDXL, Illustrious, NoobAI, Pony and Flux LoRAs are rejected."
+}

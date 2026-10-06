@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "family": "Anima-2.9B-40",
+  "checkpointModelId": 934764,
+  "checkpointVersionId": 3360028,
+  "comfyuiMinVersion": "0.34.0",
+  "assets": [
+    {
+      "id": "miaomiao-harem-3360028",
+      "name": "MiaoMiao Harem 2.9B Beta 1.1",
+      "role": "diffusion_model",
+      "family": "Anima-2.9B-40",
+      "architectureBlocks": 40,
+      "filename": "miaomiaoHarem_29BBETA11.safetensors",
+      "downloadUrl": "https://civitai.com/api/download/models/3360028?fileId=3247723",
+      "sha256": "0fb5286099cb6059c5be09c1eb50d222ac6eae9626d761166b7514f8e38ded12",
+      "sizeBytes": 5843203272,
+      "sourceUrl": "https://civitai.com/models/934764?modelVersionId=3360028",
+      "modelId": 934764,
+      "modelVersionId": 3360028,
+      "fileId": 3247723,
+      "creator": "MIAOKA"
+    },
+    {
+      "id": "anima-qwen-3-06b-base",
+      "name": "Anima Qwen 3 0.6B text encoder",
+      "role": "text_encoder",
+      "family": "Anima-2.9B-40",
+      "filename": "qwen_3_06b_base.safetensors",
+      "downloadUrl": "https://huggingface.co/circlestone-labs/Anima/resolve/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/text_encoders/qwen_3_06b_base.safetensors",
+      "sha256": "cd2a512003e2f9f3cd3c32a9c3573f820bb28c940f73c57b1ddaa983d9223eba",
+      "sizeBytes": 1192135096,
+      "sourceUrl": "https://huggingface.co/circlestone-labs/Anima/blob/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/text_encoders/qwen_3_06b_base.safetensors",
+      "sourceRevision": "f973fc41ec7545364ac9776c2440285f43ff2a30",
+      "creator": "CircleStone Labs"
+    },
+    {
+      "id": "anima-qwen-image-vae",
+      "name": "Anima Qwen Image VAE",
+      "role": "vae",
+      "family": "Anima-2.9B-40",
+      "filename": "qwen_image_vae.safetensors",
+      "downloadUrl": "https://huggingface.co/circlestone-labs/Anima/resolve/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/vae/qwen_image_vae.safetensors",
+      "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f",
+      "sizeBytes": 253806246,
+      "sourceUrl": "https://huggingface.co/circlestone-labs/Anima/blob/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/vae/qwen_image_vae.safetensors",
+      "sourceRevision": "f973fc41ec7545364ac9776c2440285f43ff2a30",
+      "creator": "CircleStone Labs"
+    }
+  ]
+}
