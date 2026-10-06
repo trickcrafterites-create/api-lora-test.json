@@ -3,11 +3,12 @@
 FROM runpod/worker-comfyui:5.10.0-base@sha256:e9d18d3db15839ebb10c10c824109fc2956f31ef7bf21916220c008855b0d538
 
 LABEL org.opencontainers.image.title="Aelix private MiaoMiao Anima worker" \
-      org.opencontainers.image.description="Private, base-only Anima 2.9B ComfyUI worker; no model weights are redistributed from this repository" \
+      org.opencontainers.image.description="Private Anima 2.9B ComfyUI worker with exact-version character LoRAs; no model weights are redistributed from this repository" \
       org.opencontainers.image.licenses="LicenseRef-CircleStone-NonCommercial"
 
 COPY scripts/download_loras.py /opt/aelix-anima/download_loras.py
 COPY scripts/anima_install.py /opt/aelix-anima/anima_install.py
+COPY custom_nodes/aelix_private_lora /comfyui/custom_nodes/aelix_private_lora
 COPY catalog/anima-assets.json /opt/aelix-anima/anima-assets.json
 COPY catalog/anima-loras.json /opt/aelix-anima/anima-loras.json
 COPY ANIMA-NOTICE.md /opt/aelix-anima/NOTICE.md
@@ -20,8 +21,8 @@ RUN python /opt/aelix-anima/anima_install.py \
     --output-root /comfyui/models \
     --retries 4 --timeout 90 --min-interval 5 --max-elapsed 1500
 
-# Empty by design today. Future reviewed native/remapped 40-block files can be
-# pinned here without modifying the base assets or the Illustrious Dockerfile.
+# Exact reviewed native/remapped 40-block files are pinned independently of
+# the base assets and the Illustrious Dockerfile. Auth-gated files stay out.
 RUN python /opt/aelix-anima/anima_install.py \
     --kind loras \
     --manifest /opt/aelix-anima/anima-loras.json \

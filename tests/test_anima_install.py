@@ -16,6 +16,7 @@ class AnimaManifestTests(unittest.TestCase):
         self.assets_path = ROOT / "catalog" / "anima-assets.json"
         self.loras_path = ROOT / "catalog" / "anima-loras.json"
         self.assets = json.loads(self.assets_path.read_text(encoding="utf-8"))
+        self.loras = json.loads(self.loras_path.read_text(encoding="utf-8"))
 
     def write_manifest(self, value):
         temp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8")
@@ -36,6 +37,14 @@ class AnimaManifestTests(unittest.TestCase):
         finally:
             path.unlink(missing_ok=True)
 
+    def assert_lora_rejected(self, value, pattern):
+        path = self.write_manifest(value)
+        try:
+            with self.assertRaisesRegex(DownloadError, pattern):
+                load_lora_manifest(path)
+        finally:
+            path.unlink(missing_ok=True)
+
     def test_exact_three_asset_contract_is_pinned(self):
         assets = load_asset_manifest(self.assets_path)
         self.assertEqual({item["role"] for item in assets}, {"diffusion_model", "text_encoder", "vae"})
@@ -45,10 +54,27 @@ class AnimaManifestTests(unittest.TestCase):
         self.assertEqual(checkpoint["sha256"], "0fb5286099cb6059c5be09c1eb50d222ac6eae9626d761166b7514f8e38ded12")
         self.assertEqual(checkpoint["architectureBlocks"], 40)
 
-    def test_empty_lora_catalog_is_only_allowed_explicitly(self):
-        with self.assertRaisesRegex(DownloadError, "at least one"):
-            load_lora_manifest(self.loras_path)
-        self.assertEqual(load_lora_manifest(self.loras_path, allow_empty=True), [])
+    def test_exact_public_lora_catalog_and_auth_gated_exception_are_pinned(self):
+        models = load_lora_manifest(self.loras_path)
+        self.assertEqual(len(models), 39)
+        self.assertEqual(sum(item["sizeBytes"] for item in models), 4_078_862_048)
+        self.assertEqual(len({item["modelVersionId"] for item in models}), 39)
+        self.assertEqual(len({item["fileId"] for item in models}), 39)
+        self.assertNotIn(3227485, {item["modelVersionId"] for item in models})
+        juno = next(item for item in models if item["id"] == "juno-beastars")
+        self.assertEqual(juno["activationPhrases"], ["junobeastars"])
+        self.assertEqual(juno["sha256"], "2f4177063d3f888fd5c4b6a7b632f70e3f695d4e101e03a081f1a1c6723ba12b")
+        self.assertEqual(self.loras["unresolved"], [{
+            "id": "hinako-issho-training",
+            "name": "Hinako",
+            "modelId": 854149,
+            "modelVersionId": 3227485,
+            "fileId": 3109704,
+            "filename": "hinako_issho_ni_training_Anima-2.9B-preview-v1_v1.safetensors",
+            "sizeBytes": 131_231_448,
+            "sha256": "282ad28c5eea46d0a7b5f93033aaa20136fd38f642a0d3f10466bcaad8b56dfb",
+            "reason": "The exact Civitai download returns HTTP 401 without an account bearer token. Keep credentials out of manifests, URLs, image layers and build logs.",
+        }])
 
     def test_manifest_rejects_wrong_family_and_legacy_architecture(self):
         wrong_family = copy.deepcopy(self.assets)
@@ -89,6 +115,12 @@ class AnimaManifestTests(unittest.TestCase):
                 "downloadUrl": "https://civitai.com/api/download/models/1?fileId=2",
                 "sha256": "a" * 64,
                 "sizeBytes": 1024,
+                "modelId": 3,
+                "modelVersionId": 1,
+                "fileId": 2,
+                "name": "Test Character",
+                "creator": "Test Creator",
+                "activationPhrases": ["test_character"],
             }],
         }
         path = self.write_manifest(manifest)
@@ -100,6 +132,19 @@ class AnimaManifestTests(unittest.TestCase):
                 load_lora_manifest(path)
         finally:
             path.unlink(missing_ok=True)
+
+    def test_lora_metadata_fails_closed(self):
+        for mutate, pattern in [
+            (lambda model: model.update(downloadUrl="https://civitai.com/api/download/models/9?fileId=2"), "exact Civitai"),
+            (lambda model: model.update(activationPhrases=["same", "same"]), "unique"),
+            (lambda model: model.update(modelVersionId=0), "modelVersionId"),
+        ]:
+            changed = copy.deepcopy(self.loras)
+            mutate(changed["models"][0])
+            self.assert_lora_rejected(changed, pattern)
+        changed = copy.deepcopy(self.loras)
+        changed["unresolved"][0]["downloadUrl"] = "https://civitai.com/api/download/models/3227485?token=secret"
+        self.assert_lora_rejected(changed, "must not contain a download URL")
 
     def test_dedicated_dockerfile_cannot_mutate_the_illustrious_image(self):
         dockerfile = (ROOT / "Dockerfile.anima").read_text(encoding="utf-8")

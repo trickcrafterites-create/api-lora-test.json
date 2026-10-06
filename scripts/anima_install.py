@@ -30,6 +30,9 @@ EXPECTED_ASSET_ROLES = frozenset(ROLE_DIRS)
 ALLOWED_DOWNLOAD_HOSTS = frozenset({"civitai.com", "huggingface.co"})
 SAFE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*\Z")
 LORA_COMPATIBILITY = frozenset({"native-40", "remapped-28-to-40"})
+CONTROL_CHARACTERS = re.compile(r"[\x00-\x1f\x7f-\x9f]")
+MAX_ACTIVATION_PHRASES = 20
+MAX_ACTIVATION_PHRASE_CHARS = 1000
 
 
 def _read_manifest(path: Path) -> dict:
@@ -98,13 +101,68 @@ def load_lora_manifest(path: Path, allow_empty: bool = False) -> list[dict]:
     models = manifest.get("models")
     if not isinstance(models, list) or (not models and not allow_empty):
         raise DownloadError("LoRA manifest must contain at least one model")
-    seen_ids, seen_names = set(), set()
+    seen_ids, seen_names, seen_versions, seen_file_ids = set(), set(), set(), set()
     for index, model in enumerate(models):
         _validate_download(model, index, seen_ids, seen_names)
         if model.get("architectureBlocks") != 40:
             raise DownloadError(f"{model['id']}: only 40-block Anima 2.9B LoRA files may be installed")
         if model.get("compatibility") not in LORA_COMPATIBILITY:
             raise DownloadError(f"{model['id']}: compatibility must be native-40 or remapped-28-to-40")
+        for field in ("modelId", "modelVersionId", "fileId"):
+            value = model.get(field)
+            if type(value) is not int or value <= 0:
+                raise DownloadError(f"{model['id']}: exact positive {field} is required")
+        if model["modelVersionId"] in seen_versions or model["fileId"] in seen_file_ids:
+            raise DownloadError(f"{model['id']}: duplicate Civitai version or file identity")
+        seen_versions.add(model["modelVersionId"])
+        seen_file_ids.add(model["fileId"])
+        for field in ("name", "creator"):
+            value = model.get(field)
+            if (not isinstance(value, str) or not value or value != value.strip()
+                    or len(value) > 200 or CONTROL_CHARACTERS.search(value)):
+                raise DownloadError(f"{model['id']}: valid {field} metadata is required")
+        phrases = model.get("activationPhrases")
+        if not isinstance(phrases, list) or not 1 <= len(phrases) <= MAX_ACTIVATION_PHRASES:
+            raise DownloadError(f"{model['id']}: activationPhrases must contain 1..{MAX_ACTIVATION_PHRASES} values")
+        if len(set(phrases)) != len(phrases):
+            raise DownloadError(f"{model['id']}: activationPhrases must be unique")
+        for phrase in phrases:
+            if (not isinstance(phrase, str) or not phrase or phrase != phrase.strip()
+                    or len(phrase) > MAX_ACTIVATION_PHRASE_CHARS or CONTROL_CHARACTERS.search(phrase)):
+                raise DownloadError(f"{model['id']}: invalid activation phrase metadata")
+        parsed = urllib.parse.urlsplit(model["downloadUrl"])
+        match = re.fullmatch(r"/api/download/models/(\d+)", parsed.path)
+        query = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+        if (parsed.hostname != "civitai.com" or not match
+                or int(match.group(1)) != model["modelVersionId"]
+                or query != {"fileId": [str(model["fileId"])]}):
+            raise DownloadError(f"{model['id']}: downloadUrl must pin the exact Civitai version and fileId")
+
+    unresolved = manifest.get("unresolved", [])
+    if not isinstance(unresolved, list):
+        raise DownloadError("LoRA manifest unresolved field must be a list")
+    for index, item in enumerate(unresolved):
+        if not isinstance(item, dict):
+            raise DownloadError(f"Unresolved LoRA entry {index} is not an object")
+        item_id, filename = item.get("id"), item.get("filename")
+        if not isinstance(item_id, str) or not SAFE_ID.fullmatch(item_id) or item_id in seen_ids:
+            raise DownloadError(f"Unresolved LoRA entry {index} has an invalid or duplicate id")
+        if not isinstance(filename, str) or not SAFE_FILENAME.fullmatch(filename):
+            raise DownloadError(f"{item_id}: unresolved filename must be a safe .safetensors basename")
+        for field in ("modelId", "modelVersionId", "fileId", "sizeBytes"):
+            value = item.get(field)
+            if type(value) is not int or value <= 0:
+                raise DownloadError(f"{item_id}: exact positive {field} is required")
+        if (not isinstance(item.get("sha256"), str)
+                or not re.fullmatch(r"[a-fA-F0-9]{64}", item["sha256"])):
+            raise DownloadError(f"{item_id}: a full unresolved SHA256 hash is required")
+        reason = item.get("reason")
+        if (not isinstance(reason, str) or not reason or reason != reason.strip()
+                or len(reason) > 500 or CONTROL_CHARACTERS.search(reason)):
+            raise DownloadError(f"{item_id}: a safe unresolved reason is required")
+        if "downloadUrl" in item:
+            raise DownloadError(f"{item_id}: unresolved entries must not contain a download URL")
+        seen_ids.add(item_id)
     return models
 
 

@@ -24,12 +24,17 @@ to `models/diffusion_models`, the Anima Qwen 3 0.6B encoder to
 match both its exact byte length and SHA256 and pass a SafeTensors structural
 check before an atomic rename exposes it.
 
-`catalog/anima-loras.json` is intentionally empty. The base checkpoint works
-without a LoRA. Only exact native 40-block files or files already converted
-from 28 to 40 blocks may be added. Raw 28-block Anima, Illustrious, NoobAI,
-Pony, SDXL, Flux, or other architectures fail manifest validation. Do not add
-the runtime remapping patch unless the catalog and application contract are
-separately changed to distinguish raw legacy files from converted ones.
+`catalog/anima-loras.json` pins 39 anonymously downloadable character LoRAs:
+37 creator-supplied 28-to-40 remaps and two native 40-block files. Exact Civitai
+version/file IDs, byte sizes, hashes and activation phrases are validated before
+download. Hinako version 3227485 is recorded as unresolved because its exact
+download requires a Civitai bearer token; credentials must not be embedded in
+the manifest, URL, Docker layer or build log.
+
+Raw 28-block Anima, Illustrious, NoobAI, Pony, SDXL, Flux, or other
+architectures fail manifest validation. Do not add the runtime remapping patch
+unless the catalog and application contract are separately changed to
+distinguish raw legacy files from converted ones.
 
 ## API workflow contract
 
